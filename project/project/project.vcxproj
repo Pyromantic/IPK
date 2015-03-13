@@ -64,12 +64,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\arguments.cpp" />
     <ClCompile Include="..\..\client.cpp" />
     <ClCompile Include="..\..\client_args.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\arguments.h" />
     <ClInclude Include="..\..\client.h" />
     <ClInclude Include="..\..\client_args.h" />
   </ItemGroup>

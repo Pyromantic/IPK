@@ -1,40 +1,46 @@
 #pragma once
-#include "arguments.h"
-#include <map>
 #include <string>
-#include <iostream>
-class client_args : protected arguments {
-private:
-	std::string hostname;	// Hostname
-	int port;				// Port number
-	std::string login;		// login
-	int assortment;			// assortment types
-	std::string value;		// assortment value
 
+class client_args {
 public:
+	client_args();
+
+	~client_args();
+
 	void argumentsParsing(const int, char**);
 
 private:
-	inline void argcCheck(const int argc) final;	// overridden inline method, final state
+	std::string hostname;	// Hostname
+	int port;		// Port number
+	std::string login;	// login
+	int assortment;		// assortment types
+	std::string assortValue;// assortment value
 
-	inline void setHostname(char**);
+	void argcCheck(const int);
 
-	inline void setPortNumber(char**);
+	void setHostname(char**);
 
-	inline void setLogin(char**);
+	void setPortNumber(char**);
 
-	inline void setAssortmentType(char**);
+	void setLogin(char**);
+
+	void setAssortmentType(char**);
 
 	static const char *client_errors[];
 		
-	enum client_errors {
-		error_HOST = 0,
-		error_PORT = 1,
-		error_PORT_NUMBER = 2,
-		error_LOGIN = 3,
+	enum client_errors {	// enums of client errors
+		INVALID_PORT_NUMBERS = 0,
+
+		FEW_ARGS = 0,
+		MANY_ARGS = 1,
+		error_HOST = 2,
+		error_PORT = 3,
+		error_PORT_NUMBER = 4,
+		error_LOGIN = 5,
+		error_ASSORT_TYPE = 6,
 	};
 
-	enum client_argc {
+	enum client_argc {		// enums of client arguments
 		MIN_CLIENT_ARGC = 4,
 		MAX_CLIENT_ARGC = 9,
 
@@ -44,10 +50,17 @@ private:
 		PORT_NUMBER = 4,
 		LOGIN_TAG = 5,
 		LOGIN_NAME = 6,
+		ASSORT_TAG = 7,
+		ASSORT_VALUE = 8
 	};
 
-	enum assortment_types {
-
+	enum assortment_types {	// enum of valid assort types for client
+		USER_NAME = 0,
+		UID = 1,
+		GID = 2,
+		WHOLE_NAME = 4,
+		HOME_DIR = 5,
+		LOG_SHELL = 6
 	};
 
 public: // getters
@@ -62,6 +75,14 @@ public: // getters
 
 	inline std::string getLogin() const {		// returns login
 		return login;
+	}
+
+	inline int getAssortmentType() const {		// returns assortment type
+		return assortment;
+	}
+
+	inline std::string getAssortmentValue() const {	// return assortment value
+		return assortValue;
 	}
 
 };

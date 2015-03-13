@@ -7,17 +7,8 @@ void error(const char *msg)
 	exit(0);
 }*/
 
-#include <map>
-
-
-
-
 int main (int argc, char **argv)
 {
-
-	
-
-
 	client_args args;
 
 	try {
@@ -32,6 +23,7 @@ int main (int argc, char **argv)
 	std::cout << "hostaname: " << args.getHostname() << std::endl;
 	std::cout << "potnumber: " << args.getPortNumber() << std::endl;
 	std::cout << "loginname: " << args.getLogin() << std::endl;
+	std::cout << "assort " << args.getAssortmentType() << " : " << args.getAssortmentValue() << std::endl;
 
 	/*int sockfd, portno, n;
 	struct sockaddr_in serv_addr;

@@ -7,10 +7,7 @@ public:
 	~arguments();
 
 protected:
-	virtual inline void argcCheck(const int argc) {	// method of arguments numeric check
-		if (argc < NO_ARGUMENTS)
-			throw errors[FEW];
-	}
+	virtual void argcCheck(const int);
 
 	static const char *errors[];
 

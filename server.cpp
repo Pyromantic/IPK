@@ -1,6 +1,8 @@
+
 /*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include <unistd.h>
 #include <sys/types.h> 
 #include <sys/socket.h>
@@ -13,11 +15,14 @@ void error(const char *msg)
 }
 */
 
-#include <iostream>
+
+#include "server.h"
 
 int main(int argc, char *argv[]) {
 
-	std::map <std::string, char> grade_list;
+	server_args args;
+
+	
 
 	/*
 	int sockfd, newsockfd, portno;
