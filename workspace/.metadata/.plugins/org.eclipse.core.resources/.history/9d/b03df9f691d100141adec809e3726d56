@@ -1,0 +1,42 @@
+/*
+ * server_initializer.h
+ *
+ *  Created on: Mar 23, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+
+#include <string>
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <string.h>
+
+
+
+class server_initializer {
+public:
+	server_initializer();
+	virtual ~server_initializer();
+
+	void inicializeServer(const unsigned int);
+
+	void startsListening();
+private :
+
+	int listener;
+
+	static const char* socket_errors[];
+
+	enum socket_errors {	// enums of socket errors
+			ERROR_OPENING = 0,
+			ERROR_BINDING = 1,
+		};
+
+
+};
+

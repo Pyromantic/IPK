@@ -1,0 +1,91 @@
+#include "server_host_handle.h"
+
+using namespace std;
+
+host_handle::host_handle() : hostSocket(0) {
+}
+
+host_handle::~host_handle() {
+
+}
+
+void host_handle::inicializeHost (int listener) {	// Initial host
+
+	acceptHost(listener);	// accept host and sets host socket
+
+	getArguments();			// get arguments
+
+	close (hostSocket);		// close host socket
+}
+
+void host_handle::acceptHost (int listener) {
+
+	struct sockaddr_in cli_addr;
+
+	unsigned int clilen = sizeof(cli_addr);
+
+	hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+
+	nCheck (hostSocket, ACCEPT_ERROR);
+}
+
+void host_handle::getArguments () {			// gets arguments
+
+	// handshake - receiving argc
+
+	unsigned int argc (getArgc());
+
+	cout << argc << endl;
+
+	while (argc > 0) {
+
+		unsigned int bufferSize (getBufferSize());	// handshake - receiving bufferSize
+
+		cout << bufferSize << endl;
+
+		string message (getArgument);				// actual message receiver
+
+		cout << message << endl;
+	}
+
+}
+
+unsigned int host_handle::getArgc () {			// handshake - receiving argc
+	unsigned int argc;
+
+	int n = read(socket, &argc, sizeof(argc));
+
+	nCheck(n, READING_ERROR);
+
+	return argc;
+}
+
+unsigned int host_handle::getBufferSize () {	// handshake - receiving bufferSize
+	unsigned int bufferSize;
+
+	int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+
+	nCheck(n, READING_ERROR);
+
+	return bufferSize;
+}
+
+string host_handle::getArgument() {				// actual message receiver
+
+	vector <char> buffer (bufferSize);
+
+	int n = read(socket, &buffer[0], buffer.size());
+
+	nCheck (n, READING_ERROR);
+
+	string str (buffer.begin(), buffer.end());
+
+	return str;
+}
+
+const char* host_handle::listener_errors[] {
+	"ERROR on accept",
+	"ERROR reading from socket",
+	"ERROR writing to socket",
+	"Unknown transmit error",
+};

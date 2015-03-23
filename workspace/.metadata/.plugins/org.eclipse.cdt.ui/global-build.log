@@ -2688,3 +2688,2048 @@ Invoking: GCC C++ Linker
 g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
 Finished building target: client
  
+17:55:20 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_args.d" -MT"src/server_args.d" -o "src/server_args.o" "../src/server_args.cpp"
+Finished building: ../src/server_args.cpp
+ 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building file: /home/majk/workspace/socket_binder_unix.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/socket_binder_unix.d" -MT"src/socket_binder_unix.d" -o "src/socket_binder_unix.o" "/home/majk/workspace/socket_binder_unix.cpp"
+Finished building: /home/majk/workspace/socket_binder_unix.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+17:56:22 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:06:04 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:22:15: error: ‘sendArgument’ was not declared in this scope
+  sendArgument();
+               ^
+../src/client_sender.cpp: At global scope:
+../src/client_sender.cpp:54:34: error: no ‘void client_sender::sendArgument()’ member function declared in class ‘client_sender’
+ void client_sender::sendArgument() {
+                                  ^
+make: *** [src/client_sender.o] Error 1
+18:06:58 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:15:36 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp:56:6: error: prototype for ‘void client_sender::sendArgument(std::string)’ does not match any in class ‘client_sender’
+ void client_sender::sendArgument (string argument) {
+      ^
+In file included from ../src/client_sender.cpp:8:0:
+../src/client_sender.h:39:7: error: candidate is: void client_sender::sendArgument()
+  void sendArgument();
+       ^
+make: *** [src/client_sender.o] Error 1
+18:15:46 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:24:15: error: no matching function for call to ‘client_sender::sendArgument()’
+  sendArgument();      // sends single argument to server
+               ^
+../src/client_sender.cpp:24:15: note: candidate is:
+In file included from ../src/client_sender.cpp:8:0:
+../src/client_sender.h:39:7: note: void client_sender::sendArgument(std::string)
+  void sendArgument(string);
+       ^
+../src/client_sender.h:39:7: note:   candidate expects 1 argument, 0 provided
+make: *** [src/client_sender.o] Error 1
+18:16:49 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: error: ‘argsVector’ was not declared in this scope
+  sendArgument(argsVector.at(0));      // sends single argument to server
+               ^
+make: *** [src/client_sender.o] Error 1
+18:17:09 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: error: ‘argsVector’ was not declared in this scope
+  string tmp = argsVector.at(0);
+               ^
+make: *** [src/client_sender.o] Error 1
+18:17:30 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:18:07 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:18:39 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:18:57 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:32:30 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:32:34 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArgc(unsigned int)’:
+../src/client_sender.cpp:68:2: error: ‘n’ was not declared in this scope
+  n = write(communicati, &argc, sizeof(argc));
+  ^
+make: *** [src/client_sender.o] Error 1
+18:32:45 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:35:34 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:35:36 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:36:08 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:37:52 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:38:41 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:39:05 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:39:35 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:40:09 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:40:14 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:40:41 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:41:01 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:41:28 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:41:56 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+18:42:40 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+18:43:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:43:24 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:43:35 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:43:59 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:44:19 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:46:57 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+18:47:02 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+../src/client_sender.cpp: In member function ‘void client_sender::sendArgument(std::string)’:
+../src/client_sender.cpp:100:25: error: ‘readBuffser’ was not declared in this scope
+   n = read(communicati, readBuffser, sizeof(readBuffer));
+                         ^
+make: *** [src/client_sender.o] Error 1
+18:47:15 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:01:39 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+19:01:41 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:06:09 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:06:43 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:06:46 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+19:08:06 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:08:10 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+19:08:57 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendArguments(client_args)’:
+../src/client_sender.cpp:26:15: warning: unused variable ‘argc’ [-Wunused-variable]
+  unsigned int argc (argsVector.size());    //  number of arguments
+               ^
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:09:10 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:09:13 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+19:19:02 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:38:34 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+In file included from ../src/server.h:6:0,
+                 from ../src/server.cpp:1:
+../src/server_listener.h: In function ‘int main(int, char**)’:
+../src/server_listener.h:35:7: error: ‘void server_listener::listener()’ is private
+  void listener();
+       ^
+../src/server.cpp:33:21: error: within this context
+   listener.listener();
+                     ^
+make: *** [src/server.o] Error 1
+19:40:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+../src/server.cpp: In function ‘int main(int, char**)’:
+../src/server.cpp:31:41: error: no matching function for call to ‘server_listener::inicializeServer(int&)’
+   listener.inicializeServer(socketNumber);
+                                         ^
+../src/server.cpp:31:41: note: candidate is:
+In file included from ../src/server.h:6:0,
+                 from ../src/server.cpp:1:
+../src/server_listener.h:27:7: note: void server_listener::inicializeServer()
+  void inicializeServer();
+       ^
+../src/server_listener.h:27:7: note:   candidate expects 0 arguments, 1 provided
+make: *** [src/server.o] Error 1
+20:31:15 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+../src/server.cpp: In function ‘int main(int, char**)’:
+../src/server.cpp:31:8: error: ‘class host_handle’ has no member named ‘inicializeHost’
+   host.inicializeHost(server.getSocket());
+        ^
+make: *** [src/server.o] Error 1
+20:31:37 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp:21:6: error: ‘shost_handle’ has not been declared
+ void shost_handle::acceptHost (int listener) {
+      ^
+../src/server_host_handle.cpp: In function ‘void acceptHost(int)’:
+../src/server_host_handle.cpp:27:2: error: ‘hostSocket’ was not declared in this scope
+  hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+  ^
+../src/server_host_handle.cpp:29:22: error: ‘ACCEPT_ERROR’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                      ^
+../src/server_host_handle.cpp:29:34: error: ‘nCheck’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                                  ^
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: At global scope:
+../src/server_host_handle.cpp:73:8: error: prototype for ‘std::string host_handle::getArgument()’ does not match any in class ‘host_handle’
+ string host_handle::getArgument() {    // actual message receiver
+        ^
+In file included from ../src/server_host_handle.cpp:1:0:
+../src/server_host_handle.h:33:7: error: candidate is: void host_handle::getArgument()
+  void getArgument();
+       ^
+make: *** [src/server_host_handle.o] Error 1
+20:31:51 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+In file included from ../src/server.h:6:0,
+                 from ../src/server.cpp:1:
+../src/server_host_handle.h:33:2: error: ‘string’ does not name a type
+  string getArgument();
+  ^
+make: *** [src/server.o] Error 1
+20:32:05 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp:21:6: error: ‘shost_handle’ has not been declared
+ void shost_handle::acceptHost (int listener) {
+      ^
+../src/server_host_handle.cpp: In function ‘void acceptHost(int)’:
+../src/server_host_handle.cpp:27:2: error: ‘hostSocket’ was not declared in this scope
+  hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+  ^
+../src/server_host_handle.cpp:29:22: error: ‘ACCEPT_ERROR’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                      ^
+../src/server_host_handle.cpp:29:34: error: ‘nCheck’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                                  ^
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:32:12 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp:21:6: error: ‘shost_handle’ has not been declared
+ void shost_handle::acceptHost (int listener) {
+      ^
+../src/server_host_handle.cpp: In function ‘void acceptHost(int)’:
+../src/server_host_handle.cpp:27:2: error: ‘hostSocket’ was not declared in this scope
+  hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+  ^
+../src/server_host_handle.cpp:29:22: error: ‘ACCEPT_ERROR’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                      ^
+../src/server_host_handle.cpp:29:34: error: ‘nCheck’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                                  ^
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:32:28 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp:21:6: error: ‘shost_handle’ has not been declared
+ void shost_handle::acceptHost (int listener) {
+      ^
+../src/server_host_handle.cpp: In function ‘void acceptHost(int)’:
+../src/server_host_handle.cpp:27:2: error: ‘hostSocket’ was not declared in this scope
+  hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+  ^
+../src/server_host_handle.cpp:29:22: error: ‘ACCEPT_ERROR’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                      ^
+../src/server_host_handle.cpp:29:34: error: ‘nCheck’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                                  ^
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:33:02 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp:21:6: error: ‘shost_handle’ has not been declared
+ void shost_handle::acceptHost (int listener) {
+      ^
+../src/server_host_handle.cpp: In function ‘void acceptHost(int)’:
+../src/server_host_handle.cpp:27:2: error: ‘hostSocket’ was not declared in this scope
+  hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+  ^
+../src/server_host_handle.cpp:29:22: error: ‘ACCEPT_ERROR’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                      ^
+../src/server_host_handle.cpp:29:34: error: ‘nCheck’ was not declared in this scope
+  nCheck (hostSocket, ACCEPT_ERROR);
+                                  ^
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:33:18 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:45:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:45:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:45:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:55:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:65:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:76:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:33:31 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:33:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:34:16 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:46:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:46:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:46:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:56:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:66:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:75:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:77:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:34:30 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:45:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:45:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:45:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:55:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:65:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:76:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:34:33 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:45:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:45:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:45:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:55:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:65:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:76:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:34:59 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:45:30: error: no matching function for call to ‘std::basic_string<char>::basic_string(<unresolved overloaded function type>)’
+   string message (getArgument);    // actual message receiver
+                              ^
+../src/server_host_handle.cpp:45:30: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+../src/server_host_handle.cpp:45:30: note:   candidate expects 3 arguments, 1 provided
+   string message (getArgument);    // actual message receiver
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_host_handle.h:3,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:522:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::initializer_list<char>’
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:507:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_string<char>&&’
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:497:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:483:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:471:7: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:462:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:455:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:448:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const std::allocator<char>&’
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:55:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:65:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:76:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:35:19 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:55:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:65:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:76:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:35:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getArgc()’:
+../src/server_host_handle.cpp:55:42: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+../src/server_host_handle.cpp: In member function ‘unsigned int host_handle::getBufferSize()’:
+../src/server_host_handle.cpp:65:15: error: ‘newsockfd’ was not declared in this scope
+  int n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+               ^
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+../src/server_host_handle.cpp:76:48: error: invalid conversion from ‘int (*)(int, int, int)throw ()’ to ‘int’ [-fpermissive]
+  int n = read(socket, &buffer[0], buffer.size());
+                                                ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:360:16: error:   initializing argument 1 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+20:36:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘std::string host_handle::getArgument()’:
+../src/server_host_handle.cpp:74:24: error: ‘bufferSize’ was not declared in this scope
+  vector <char> buffer (bufferSize);
+                        ^
+make: *** [src/server_host_handle.o] Error 1
+20:36:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_initializer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_initializer.d" -MT"src/server_initializer.d" -o "src/server_initializer.o" "../src/server_initializer.cpp"
+Finished building: ../src/server_initializer.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+20:37:03 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+20:37:11 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+20:37:16 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+20:42:38 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+20:44:51 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::getArguments()’:
+../src/server_host_handle.cpp:41:16: warning: unused variable ‘bufferSize’ [-Wunused-variable]
+   unsigned int bufferSize (getBufferSize()); // handshake - receiving bufferSize
+                ^
+../src/server_host_handle.cpp:43:11: error: ‘bufferSize’ was not declared in this scope
+   cout << bufferSize << endl;
+           ^
+../src/server_host_handle.cpp: At global scope:
+../src/server_host_handle.cpp:50:1: error: expected declaration before ‘}’ token
+ }
+ ^
+make: *** [src/server_host_handle.o] Error 1
+20:45:02 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 

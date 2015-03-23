@@ -6,19 +6,22 @@
 CPP_SRCS += \
 ../src/server.cpp \
 ../src/server_args.cpp \
-../src/server_listener.cpp \
+../src/server_host_handle.cpp \
+../src/server_initializer.cpp \
 /home/majk/workspace/socket_binder_unix.cpp 
 
 OBJS += \
 ./src/server.o \
 ./src/server_args.o \
-./src/server_listener.o \
+./src/server_host_handle.o \
+./src/server_initializer.o \
 ./src/socket_binder_unix.o 
 
 CPP_DEPS += \
 ./src/server.d \
 ./src/server_args.d \
-./src/server_listener.d \
+./src/server_host_handle.d \
+./src/server_initializer.d \
 ./src/socket_binder_unix.d 
 
 

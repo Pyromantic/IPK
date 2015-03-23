@@ -14,27 +14,28 @@ int main (int argc, char *argv[]) {
 
 	std::cout << "port NUm: " << args.getPortNumber() << std::endl;
 
-	socket_binder socket;
-
-	int socketNumber(0);
+	server_initializer server;
 
 	try {
-		socketNumber = socket.binder(args.getPortNumber());
+		server.inicializeServer(args.getPortNumber());
 	} catch (const char * e) {
 		std::cout << "el problema socketa: " << e << std::endl;
 		return 1;
 	}
 
-	server_listener listener;
+	server.startsListening();	// starts server
 
-	listener.setSocket(socketNumber);
+	host_handle host;
 
 	try {
-		listener.listener();
+		host.inicializeHost(server.getSocket());
 	} catch (const char * e) {
+		server.closeSocket();
 		std::cout << "el problema listenera: " << e << std::endl;
 		return 1;
 	}
+
+	server.closeSocket();		// stops server
 
 	return 0;
 }

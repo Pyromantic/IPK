@@ -19,17 +19,10 @@ int main(int argc, char** argv) {
 		cout << "el problema: " << e << endl;
 		return 1;
 	}
-/*	cout << "hostname: " << args.getHostname() << endl;
-	cout << "port: " << args.getPortNumber() << endl;
-	cout << "assortment: " << args.getAssortmentType() << " value : " <<
-			args.getAssortmentValue() << endl;
-*/
-
-	client_sender sender(args);
+	client_sender sender;
 
 	try {
-		sender.beginCommunication();
-		sender.sendStuff();
+		sender.sendArguments(args);
 	} catch (const char* e) {
 		cout << "el problema sendera: " << e << endl;
 		return 1;

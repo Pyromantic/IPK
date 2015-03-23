@@ -1,0 +1,87 @@
+/*
+ * serverlistener.cpp
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#include "server_listener.h"
+
+server_listener::server_listener() : socket(0) {
+}
+
+server_listener::~server_listener() {
+
+}
+
+void server_listener::inicializeServer() {	// Initial server
+
+	listener();			// starts listening
+
+	getArguments();		// get arguments
+
+	close(socket);		// close socket, exits server
+}
+
+void server_listener::listener () {
+
+	listen(socket, 5);
+
+	struct sockaddr_in cli_addr;
+
+	unsigned int clilen = sizeof(cli_addr);
+
+	int newsockfd = accept(socket, (struct sockaddr *)(&cli_addr), &clilen);
+
+	nCheck (newsockfd, ACCEPT_ERROR);
+
+}
+
+void server_listener::getArguments () {
+
+	int n;
+
+	// handshake - receiving argc
+
+	unsigned int argc (getArgc());
+
+	std::cout << argc << std::endl;
+
+	//	handshake - receiving bufferSize
+
+	unsigned int bufferSize;
+
+	n = read(newsockfd, &bufferSize, sizeof(bufferSize));
+
+	nCheck(n, READING_ERROR);
+
+	std::cout << bufferSize << std::endl;
+
+	// actual message receiver
+
+	std::vector<char> buffer (bufferSize);
+
+	n = read(newsockfd, &buffer[0], buffer.size());
+
+	nCheck (n, READING_ERROR);
+
+	std::string output(buffer.begin(), buffer.end());
+
+	std::cout << output << std::endl;
+
+}
+
+unsigned int server_listener::getArgc() {		// handshake - receiving argc
+	unsigned int argc;
+
+	n = read(newsockfd, &argc, sizeof(argc));
+
+	nCheck(n, READING_ERROR);
+}
+
+const char* server_listener::listener_errors[] {
+	"ERROR on accept",
+	"ERROR reading from socket",
+	"ERROR writing to socket",
+	"Unknown transmit error",
+};

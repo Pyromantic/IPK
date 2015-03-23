@@ -1,0 +1,17 @@
+/*
+ * server_initializer.h
+ *
+ *  Created on: Mar 23, 2015
+ *      Author: majk
+ */
+
+#ifndef SERVER_INITIALIZER_H_
+#define SERVER_INITIALIZER_H_
+
+class server_initializer {
+public:
+	server_initializer();
+	virtual ~server_initializer();
+};
+
+#endif /* SERVER_INITIALIZER_H_ */

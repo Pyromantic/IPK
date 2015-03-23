@@ -1,25 +1,6 @@
-17:20:09 **** Incremental Build of configuration Debug for project client ****
+20:37:16 **** Incremental Build of configuration Debug for project client ****
 make all 
-Building file: ../src/client.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
-Finished building: ../src/client.cpp
- 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building file: ../src/client_sender.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
-Finished building: ../src/client_sender.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
-Finished building target: client
- 
+make: Nothing to be done for `all'.
 
-17:20:10 Build Finished (took 1s.310ms)
+20:37:16 Build Finished (took 70ms)
 

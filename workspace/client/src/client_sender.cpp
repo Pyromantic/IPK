@@ -7,12 +7,30 @@
 
 #include "client_sender.h"
 
-client_sender::client_sender (client_args arguments) : communicati(0) {
-	args = arguments;		// args init
+using namespace std;
+
+client_sender::client_sender () : communicati(0) {
 }
 
 client_sender::~client_sender() {
 
+}
+
+void client_sender::sendArguments (client_args arguments) {	// sends server arguments
+	args = move(arguments);		// arguments initialization
+
+	beginCommunication();								// establish communicating socket
+
+	vector <string> argsVector (args.getAssortment());	// vector of arguments
+
+	unsigned int argc (argsVector.size());				// number of arguments
+
+	sendArgc (argc);									// sends number of arguments
+
+	for (vector <string>::iterator it (argsVector.begin()); it < argsVector.end() ; ++it) 			// iterates over arguments
+		sendArgument(*it);								// sends single argument to server
+
+	close(communicati);
 }
 
 void client_sender::beginCommunication () {
@@ -44,72 +62,40 @@ void client_sender::beginCommunication () {
 
 }
 
-void client_sender::sendStuff() {
+void client_sender::sendArgc (const unsigned int argc) { // number of arguments
 
-	std::vector<std::string> nevim = args.getAssortment();
+	int n;
 
-		std::string tmp = nevim.at(0);
+	n = write(communicati, &argc, sizeof(argc));
 
-		std::vector<char> data (tmp.begin(),tmp.end());
+	nCheck (n, WRITE_ERROR);
+}
 
-		std::string output(data.begin(), data.end());
+void client_sender::sendArgument (string argument) {
 
-		std::cout << "buffered info: " << output << std::endl;
-		//	data.push_back(tmp);
+		vector <char> data (argument.begin(), argument.end());
+
+		string output(data.begin(), data.end());
+
+		cout << "buffered info: " << output << endl;
 
 		int n;
 
-		// hand shake - send
+		// hand shake - send bufferSize
 
 		unsigned int bufferSize = data.size();
 
-		std::cout << "buffer size: " << bufferSize << std::endl;
+		cout << "buffer size: " << bufferSize << endl;
 
 		n = write(communicati, &bufferSize , sizeof(bufferSize));
 
 		nCheck (n, WRITE_ERROR);
-
-		// hand shake - receive
-
-		int welcome(NEGATIVE);
-
-		n = read(communicati, &welcome, sizeof(welcome));
-
-		nCheck (n, READING_ERROR);
-
-		switch (welcome) {
-		case AFFIRMATIVE:
-			// -- successful
-			break;
-
-		case NEGATIVE :
-			throw sender_errors[TRANSMIT_ERROR];
-			break;
-
-		default:
-			throw sender_errors[TRANSMIT_ERROR];
-			break;
-		}
-
 
 		// sending of actual parameters
 
 	    n = write(communicati, &data[0], bufferSize);
 
 		nCheck (n, WRITE_ERROR);
-
-
-		// lalla got yo message
-
-	    char readBuffer[255]{};
-
-		n = read(communicati, readBuffer, sizeof(readBuffer));
-
-		nCheck (n, READING_ERROR);
-
-		std::cout << readBuffer << std::endl;
-
-		close(communicati);
 };
 
 const char* client_sender::sender_errors[] {	// list of client errors
