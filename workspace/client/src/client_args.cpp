@@ -1,6 +1,5 @@
 #include "client_args.h"
 
-#include <utility>
 
 client_args::client_args() : port(0), assortment(0) {
 
@@ -9,7 +8,7 @@ client_args::client_args() : port(0), assortment(0) {
 client_args::~client_args(){
 };
 
-void client_args::argumentsParsing(const int argc, char** arguments) {
+void client_args::argumentsParsing(const unsigned int argc, char** arguments) {
 
 	argcCheck(argc);
 
@@ -20,7 +19,7 @@ void client_args::argumentsParsing(const int argc, char** arguments) {
 	setAssortmentType(argc,arguments);
 }
 
-void client_args::argcCheck(const int argc) {		// method of arguments numeric check
+void client_args::argcCheck(const unsigned int argc) {		// method of arguments numeric check
 	if (argc < MIN_CLIENT_ARGC)
 		throw client_errors[FEW_ARGS];
 
@@ -36,57 +35,65 @@ void client_args::setPortNumber(char **arguments) {	// sets port number
 	int check = atoi(arguments[PORT_NUMBER]);
 
 	if (check <= INVALID_PORT_NUMBERS)
-		throw client_errors[error_PORT_NUMBER];
+		throw client_errors[ERROR_PORT_NUMBER];
 
 	port = static_cast<unsigned short int>(check);
 }
 
-void client_args::setAssortmentType(const int argc, char **arguments) {	// sets assortment type and value
+void client_args::setAssortmentType(const unsigned int argc, char **arguments) {	// sets assortment type and value
 
-	unsigned short int assortTag (ASSORT_TAG);
-	unsigned short int assortValue (ASSORT_VALUE);
+	unsigned int assortTag (ASSORT_TAG);
+	unsigned int assortValue (ASSORT_VALUE);
 
-	while (argc > assortTag) {
+	while (argc > assortTag) {				// iterates over arguments
 
 		string tmp = arguments[assortTag];
 
-		if (tmp.size() > 2 || tmp.size() < 2)
-			throw client_errors[error_ASSORT_TYPE];
+		if (tmp.size() != 2)
+			throw client_errors[ERROR_ASSORT_TYPE];
 
-		if (tmp.at(0) != '-' )	// check prefix
-			throw client_errors[error_ASSORT_TYPE];
+		if (tmp.at(FIRST_CHAR) != '-' )		// check prefix
+			throw client_errors[ERROR_ASSORT_TYPE];
 
-		switch (arguments[ASSORT_TAG][1]) {		// dispatch assortment type
+		switch (tmp.at(IDENTIFIER)) {		// dispatch assortment type
 			case 'L' :
-				assortment = static_cast<int>(USER_NAME);
+				tmp =  USER_NAME;
 				break;
 
 			case 'U' :
-				assortment = static_cast<int>(UID);
+				tmp = UID;
 				break;
 
 			case 'G' :
-				assortment = static_cast<int>(GID);
+				tmp = GID;
 				break;
 
 			case 'N' :
-				assortment = static_cast<int>(WHOLE_NAME);
+				tmp = WHOLE_NAME;
 				break;
 
 			case 'H' :
-				assortment = static_cast<int>(HOME_DIR);
+				tmp = HOME_DIR;
 				break;
 
 			case 'S' :
-				assortment = static_cast<int>(LOG_SHELL);
+				tmp = LOG_SHELL;
 				break;
 
 			default:
-				throw client_errors[error_ASSORT_TYPE];
+				throw client_errors[ERROR_ASSORT_TYPE];
 				break;
 		}
 
-		assortValue = arguments[assortValue];	// sets assort value
+		if (argc < assortValue)
+			throw client_errors[ERROR_ASSORT_VALUE];
+
+		tmp.append(arguments[assortValue]);	// sets assort value
+
+		assortment.push_back(tmp);			// push to vector
+
+		assortTag += NEXT_ARG;
+		assortValue += NEXT_ARG;
 	}
 };
 
@@ -95,5 +102,6 @@ const char* client_args::client_errors[] {	// list of client errors
 	"too many arguments to a successful client call",
 	"invalid port number",
 	"third argument must be login",
-	"fourth argument must be an valid assortment type"
+	"argument must be an valid assortment type",
+	"assortment value is not set properly",
 };

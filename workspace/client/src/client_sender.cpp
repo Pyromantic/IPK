@@ -46,7 +46,9 @@ void client_sender::beginCommunication () {
 
 void client_sender::sendStuff() {
 
-		string tmp = args.getAssortmentValue();
+	std::vector<std::string> nevim = args.getAssortment();
+
+		std::string tmp = nevim.at(0);
 
 		std::vector<char> data (tmp.begin(),tmp.end());
 

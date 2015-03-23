@@ -2284,3 +2284,407 @@ Invoking: GCC C++ Linker
 g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
 Finished building target: server
  
+17:03:44 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:5:0,
+                 from ../src/client.cpp:8:
+../src/client_args.h: In member function ‘int client_args::getAssortmentType() const’:
+../src/client_args.h:88:10: error: cannot convert ‘const std::vector<std::basic_string<char> >’ to ‘int’ in return
+   return assortment;
+          ^
+../src/client_args.h: In member function ‘std::string client_args::getAssortmentValue() const’:
+../src/client_args.h:92:10: error: ‘assortValue’ was not declared in this scope
+   return assortValue;
+          ^
+make: *** [src/client.o] Error 1
+17:03:50 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:5:0,
+                 from ../src/client.cpp:8:
+../src/client_args.h: In member function ‘int client_args::getAssortmentType() const’:
+../src/client_args.h:88:10: error: cannot convert ‘const std::vector<std::basic_string<char> >’ to ‘int’ in return
+   return assortment;
+          ^
+../src/client_args.h: In member function ‘std::string client_args::getAssortmentValue() const’:
+../src/client_args.h:92:10: error: ‘assortValue’ was not declared in this scope
+   return assortValue;
+          ^
+make: *** [src/client.o] Error 1
+17:04:24 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:5:0,
+                 from ../src/client.cpp:8:
+../src/client_args.h: In member function ‘int client_args::getAssortmentType() const’:
+../src/client_args.h:88:10: error: cannot convert ‘const std::vector<std::basic_string<char> >’ to ‘int’ in return
+   return assortment;
+          ^
+../src/client_args.h: In member function ‘std::string client_args::getAssortmentValue() const’:
+../src/client_args.h:92:10: error: ‘assortValue’ was not declared in this scope
+   return assortValue;
+          ^
+make: *** [src/client.o] Error 1
+17:04:43 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+../src/client_args.cpp: In member function ‘void client_args::setPortNumber(char**)’:
+../src/client_args.cpp:38:23: error: ‘error_PORT_NUMBER’ was not declared in this scope
+   throw client_errors[error_PORT_NUMBER];
+                       ^
+../src/client_args.cpp: In member function ‘void client_args::setAssortmentType(int, char**)’:
+../src/client_args.cpp:48:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  while (argc > assortTag) {    // iterates over arguments
+                ^
+../src/client_args.cpp:88:14: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (argc < assortValue)
+              ^
+../src/client_args.cpp:99:2: error: ‘cout’ is not a member of ‘std’
+  std::cout << assortment.at(0) << std::endl;
+  ^
+../src/client_args.cpp:99:35: error: ‘endl’ is not a member of ‘std’
+  std::cout << assortment.at(0) << std::endl;
+                                   ^
+make: *** [src/client_args.o] Error 1
+17:05:00 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+../src/client_args.cpp: In member function ‘void client_args::setPortNumber(char**)’:
+../src/client_args.cpp:38:23: error: ‘error_PORT_NUMBER’ was not declared in this scope
+   throw client_errors[error_PORT_NUMBER];
+                       ^
+../src/client_args.cpp: In member function ‘void client_args::setAssortmentType(int, char**)’:
+../src/client_args.cpp:48:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  while (argc > assortTag) {    // iterates over arguments
+                ^
+../src/client_args.cpp:88:14: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (argc < assortValue)
+              ^
+make: *** [src/client_args.o] Error 1
+17:05:45 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+../src/client_args.cpp: In member function ‘void client_args::setPortNumber(char**)’:
+../src/client_args.cpp:38:23: error: ‘error_PORT_NUMBER’ was not declared in this scope
+   throw client_errors[error_PORT_NUMBER];
+                       ^
+make: *** [src/client_args.o] Error 1
+17:06:03 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:49:21: error: ‘class client_args’ has no member named ‘getAssortmentValue’
+   string tmp = args.getAssortmentValue();
+                     ^
+make: *** [src/client_sender.o] Error 1
+17:06:25 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:27: error: ‘tmp’ was not declared in this scope
+   std::vector<char> data (tmp.begin(),tmp.end());
+                           ^
+make: *** [src/client_sender.o] Error 1
+17:07:39 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:49:15: error: expected unqualified-id before ‘=’ token
+   std::string =  args.assortment.at(0);
+               ^
+../src/client_sender.cpp:51:27: error: ‘tmp’ was not declared in this scope
+   std::vector<char> data (tmp.begin(),tmp.end());
+                           ^
+make: *** [src/client_sender.o] Error 1
+17:07:45 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+In file included from ../src/client_sender.h:25:0,
+                 from ../src/client_sender.cpp:8:
+../src/client_args.h: In member function ‘void client_sender::sendStuff()’:
+../src/client_args.h:31:27: error: ‘std::vector<std::basic_string<char> > client_args::assortment’ is private
+  std::vector<std::string> assortment;// assortment
+                           ^
+../src/client_sender.cpp:49:26: error: within this context
+   std::string tmp = args.assortment.at(0);
+                          ^
+make: *** [src/client_sender.o] Error 1
+17:08:02 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+In file included from ../src/client_sender.h:25:0,
+                 from ../src/client_sender.cpp:8:
+../src/client_args.h: In member function ‘void client_sender::sendStuff()’:
+../src/client_args.h:31:27: error: ‘std::vector<std::basic_string<char> > client_args::assortment’ is private
+  std::vector<std::string> assortment;// assortment
+                           ^
+../src/client_sender.cpp:49:26: error: within this context
+   std::string tmp = args.assortment.at(0);
+                          ^
+make: *** [src/client_sender.o] Error 1
+17:10:24 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:10:58 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:11:04 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:11:40 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:12:21 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:13:02 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:14:04 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:14:13 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:15:55 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+17:18:37 **** Clean-only build of configuration Debug for project client ****
+make clean 
+rm -rf  ./src/client.o ./src/client_args.o ./src/client_sender.o  ./src/client.d ./src/client_args.d ./src/client_sender.d  client
+ 
+17:18:38 **** Clean-only build of configuration Debug for project server ****
+make clean 
+rm -rf  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o  ./src/server.d ./src/server_args.d ./src/server_listener.d ./src/socket_binder_unix.d  server
+ 
+17:18:40 **** Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:18:41 **** Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_args.d" -MT"src/server_args.d" -o "src/server_args.o" "../src/server_args.cpp"
+Finished building: ../src/server_args.cpp
+ 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building file: /home/majk/workspace/socket_binder_unix.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/socket_binder_unix.d" -MT"src/socket_binder_unix.d" -o "src/socket_binder_unix.o" "/home/majk/workspace/socket_binder_unix.cpp"
+Finished building: /home/majk/workspace/socket_binder_unix.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+17:18:51 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+17:19:12 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+17:20:09 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
