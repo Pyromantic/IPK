@@ -1,0 +1,25 @@
+/*
+ * serverlistener.h
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#ifndef SERVERLISTENER_H_
+#define SERVERLISTENER_H_
+
+class server_listener {
+public :
+	server_listener();
+
+	virtual ~server_listener();
+
+	void listen (const unsigned int);
+
+private :
+
+
+
+};
+
+#endif /* SERVERLISTENER_H_ */

@@ -1,0 +1,45 @@
+/*
+ * serverlistener.h
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#ifndef SERVER_LISTENER_H_
+#define SERVER_LISTENER_H_
+
+#include <string>
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
+
+#include <iostream>
+
+class server_listener {
+public :
+	server_listener();
+
+	virtual ~server_listener();
+
+	void listener (unsigned int);
+
+private :
+
+	static const char* listener_errors[];
+
+	enum listener_errors {	// enums of listener errors
+		ACCEPT_ERROR = 0,
+		READING_ERROR = 1,
+		WRITING_ERROR = 2,
+	};
+
+	enum sender_protocol {
+		LAST_MESSAGE = 0,
+		ANOTHER_MESSAGE = 1,
+	};
+
+};
+
+#endif /* SERVERLISTENER_H_ */

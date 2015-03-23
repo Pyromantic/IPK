@@ -1,0 +1,2286 @@
+19:50:14 **** Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+19:50:38 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+20:17:16 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+20:18:36 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+20:33:31 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp:49:33: warning: multi-character character constant [-Wmultichar]
+   std::vector<char> output ('0','olda','1','kluk je prima');
+                                 ^
+../src/client_sender.cpp:49:44: warning: character constant too long for its type [enabled by default]
+   std::vector<char> output ('0','olda','1','kluk je prima');
+                                            ^
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:49:59: error: no matching function for call to ‘std::vector<char>::vector(char, int, char, int)’
+   std::vector<char> output ('0','olda','1','kluk je prima');
+                                                           ^
+../src/client_sender.cpp:49:59: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note: template<class _InputIterator, class> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&)
+         vector(_InputIterator __first, _InputIterator __last,
+         ^
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note:   template argument deduction/substitution failed:
+../src/client_sender.cpp:49:59: note:   deduced conflicting types for parameter ‘_InputIterator’ (‘char’ and ‘int’)
+   std::vector<char> output ('0','olda','1','kluk je prima');
+                                                           ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note: std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<char>]
+       vector(initializer_list<value_type> __l,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note:   candidate expects 2 arguments, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, const allocator_type&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<char>]
+       vector(vector&& __rv, const allocator_type& __m)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note:   candidate expects 2 arguments, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&, const allocator_type&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<char>]
+       vector(const vector& __x, const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note:   candidate expects 2 arguments, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&) [with _Tp = char; _Alloc = std::allocator<char>]
+       vector(vector&& __x) noexcept
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note:   candidate expects 1 argument, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = char; _Alloc = std::allocator<char>]
+       vector(const vector& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note:   candidate expects 1 argument, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = char; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<char>]
+       vector(size_type __n, const value_type& __value,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note:   candidate expects 3 arguments, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<char>]
+       vector(size_type __n, const allocator_type& __a = allocator_type())
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note:   candidate expects 2 arguments, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note: std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<char>]
+       vector(const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note:   candidate expects 1 argument, 4 provided
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note: std::vector<_Tp, _Alloc>::vector() [with _Tp = char; _Alloc = std::allocator<char>]
+       vector()
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note:   candidate expects 0 arguments, 4 provided
+../src/client_sender.cpp:53:51: error: cannot convert ‘std::vector<char>’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+20:36:40 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:10: error: ‘class std::vector<std::basic_string<char> >’ has no member named ‘push_backargs’
+   output.push_backargs.(getAssortmentValue());
+          ^
+../src/client_sender.cpp:51:24: error: expected unqualified-id before ‘(’ token
+   output.push_backargs.(getAssortmentValue());
+                        ^
+../src/client_sender.cpp:51:44: error: ‘getAssortmentValue’ was not declared in this scope
+   output.push_backargs.(getAssortmentValue());
+                                            ^
+../src/client_sender.cpp:55:51: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+20:36:59 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:25: error: expected unqualified-id before ‘(’ token
+   output.push_back(args.(getAssortmentValue());
+                         ^
+../src/client_sender.cpp:51:45: error: ‘getAssortmentValue’ was not declared in this scope
+   output.push_back(args.(getAssortmentValue());
+                                             ^
+../src/client_sender.cpp:55:51: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+20:37:25 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:21: error: expected unqualified-id before ‘(’ token
+   string tmp = args.(getAssortmentValue();
+                     ^
+../src/client_sender.cpp:51:41: error: ‘getAssortmentValue’ was not declared in this scope
+   string tmp = args.(getAssortmentValue();
+                                         ^
+../src/client_sender.cpp:57:51: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+20:37:35 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:57:51: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+20:38:44 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:57:50: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t send(int, const void*, size_t, int)’
+      n = send(communicati, output, sizeof(output));
+                                                  ^
+make: *** [src/client_sender.o] Error 1
+20:40:01 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:57:51: error: too few arguments to function ‘ssize_t send(int, const void*, size_t, int)’
+      n = send(communicati, &output, sizeof(output));
+                                                   ^
+In file included from ../src/client_sender.h:14:0,
+                 from ../src/client_sender.cpp:8:
+/usr/include/x86_64-linux-gnu/sys/socket.h:149:16: note: declared here
+ extern ssize_t send (int __fd, const void *__buf, size_t __n, int __flags);
+                ^
+make: *** [src/client_sender.o] Error 1
+20:40:15 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:02:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:53:14: error: ‘string’ was not declared in this scope
+  std::vector<string> buffer;
+              ^
+../src/server_listener.cpp:53:14: note: suggested alternative:
+In file included from /usr/include/c++/4.8/string:39:0,
+                 from ../src/server_listener.h:11,
+                 from ../src/server_listener.cpp:8:
+/usr/include/c++/4.8/bits/stringfwd.h:62:33: note:   ‘std::string’
+   typedef basic_string<char>    string;   
+                                 ^
+../src/server_listener.cpp:53:20: error: template argument 1 is invalid
+  std::vector<string> buffer;
+                    ^
+../src/server_listener.cpp:53:20: error: template argument 2 is invalid
+../src/server_listener.cpp:53:28: error: invalid type in declaration before ‘;’ token
+  std::vector<string> buffer;
+                            ^
+../src/server_listener.cpp:55:9: error: request for member ‘resize’ in ‘buffer’, which is of non-class type ‘int’
+  buffer.resize(bufferSize); // resize reading buffer
+         ^
+../src/server_listener.cpp:57:44: error: invalid conversion from ‘int’ to ‘void*’ [-fpermissive]
+  n = read(newsockfd, buffer, sizeof(buffer));
+                                            ^
+In file included from ../src/server_listener.h:16:0,
+                 from ../src/server_listener.cpp:8:
+/usr/include/unistd.h:360:16: error:   initializing argument 2 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_listener.o] Error 1
+21:03:12 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:57:44: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘void*’ for argument ‘2’ to ‘ssize_t read(int, void*, size_t)’
+  n = read(newsockfd, buffer, sizeof(buffer));
+                                            ^
+make: *** [src/server_listener.o] Error 1
+21:03:18 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:03:27 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:06:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:39:52: error: invalid conversion from ‘unsigned int’ to ‘void*’ [-fpermissive]
+  n = read(newsockfd, bufferSize, sizeof(bufferSize));
+                                                    ^
+In file included from ../src/server_listener.h:16:0,
+                 from ../src/server_listener.cpp:8:
+/usr/include/unistd.h:360:16: error:   initializing argument 2 of ‘ssize_t read(int, void*, size_t)’ [-fpermissive]
+ extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+                ^
+make: *** [src/server_listener.o] Error 1
+21:06:58 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:08:47 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:57:47: error: cannot convert ‘__gnu_cxx::__alloc_traits<std::allocator<std::basic_string<char> > >::value_type {aka std::basic_string<char>}’ to ‘void*’ for argument ‘2’ to ‘ssize_t read(int, void*, size_t)’
+  n = read(newsockfd, buffer[0], sizeof(buffer));
+                                               ^
+make: *** [src/server_listener.o] Error 1
+21:09:10 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:09:13 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:09:15 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+21:09:44 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:10:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:11:18 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:11:54 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:12:30 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:12:46 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:13:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:61:15: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+  std::cout << buffer << std::endl;
+               ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/server_listener.h:18,
+                 from ../src/server_listener.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::vector<std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+make: *** [src/server_listener.o] Error 1
+21:13:53 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:14:13 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:14:31 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:16:32 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:61:19: error: ‘string’ was not declared in this scope
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                   ^
+../src/server_listener.cpp:61:19: note: suggested alternative:
+In file included from /usr/include/c++/4.8/string:39:0,
+                 from ../src/server_listener.h:11,
+                 from ../src/server_listener.cpp:8:
+/usr/include/c++/4.8/bits/stringfwd.h:62:33: note:   ‘std::string’
+   typedef basic_string<char>    string;   
+                                 ^
+../src/server_listener.cpp:61:25: error: template argument 1 is invalid
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                         ^
+../src/server_listener.cpp:61:25: error: template argument 2 is invalid
+../src/server_listener.cpp:61:43: error: invalid type in declaration before ‘i’
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                                           ^
+../src/server_listener.cpp:61:43: error: expected ‘;’ before ‘i’
+../src/server_listener.cpp:61:43: error: ‘i’ was not declared in this scope
+../src/server_listener.cpp:61:80: error: expected ‘)’ before ‘;’ token
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                                                                                ^
+../src/server_listener.cpp:61:28: warning: unused variable ‘const_iterator’ [-Wunused-variable]
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                            ^
+../src/server_listener.cpp:61:84: error: ‘i’ was not declared in this scope
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                                                                                    ^
+../src/server_listener.cpp:61:85: error: expected ‘;’ before ‘)’ token
+  for( std::vector<string>::const_iterator i = buffer.begin(); i != buffer.end(); ++i)
+                                                                                     ^
+make: *** [src/server_listener.o] Error 1
+21:16:40 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:20:17 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:20:46 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:22:44 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:23:50 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:24:05 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:24:38 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:25:36 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:26:01 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:26:49 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:27:12 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:27:26 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:27:51 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:30:12 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:33:55 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:18: error: conflicting declaration ‘char output [255]’
+   char output[255] {};
+                  ^
+../src/client_sender.cpp:49:23: error: ‘output’ has a previous declaration as ‘std::vector<std::basic_string<char> > output’
+   std::vector<string> output;
+                       ^
+../src/client_sender.cpp:52:48: error: no matching function for call to ‘std::basic_string<char>::copy(std::vector<std::basic_string<char> >&, int, int)’
+   args.getAssortmentValue().copy(output, 254, 0);
+                                                ^
+../src/client_sender.cpp:52:48: note: candidate is:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/client_sender.h:18,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:1780:7: note: std::basic_string<_CharT, _Traits, _Alloc>::size_type std::basic_string<_CharT, _Traits, _Alloc>::copy(_CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       copy(_CharT* __s, size_type __n, size_type __pos = 0) const;
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:1780:7: note:   no known conversion for argument 1 from ‘std::vector<std::basic_string<char> >’ to ‘char*’
+../src/client_sender.cpp:54:20: error: ‘tmp’ was not declared in this scope
+   output.push_back(tmp);
+                    ^
+../src/client_sender.cpp:93:51: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+21:34:35 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:18: error: conflicting declaration ‘char output [255]’
+   char output[255]{};
+                  ^
+../src/client_sender.cpp:49:23: error: ‘output’ has a previous declaration as ‘std::vector<std::basic_string<char> > output’
+   std::vector<string> output;
+                       ^
+../src/client_sender.cpp:55:25: error: no matching function for call to ‘std::basic_string<char>::copy(std::vector<std::basic_string<char> >&, int, int)’
+   tmp.copy(output, 254,0);
+                         ^
+../src/client_sender.cpp:55:25: note: candidate is:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/client_sender.h:18,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:1780:7: note: std::basic_string<_CharT, _Traits, _Alloc>::size_type std::basic_string<_CharT, _Traits, _Alloc>::copy(_CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       copy(_CharT* __s, size_type __n, size_type __pos = 0) const;
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:1780:7: note:   no known conversion for argument 1 from ‘std::vector<std::basic_string<char> >’ to ‘char*’
+../src/client_sender.cpp:96:51: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘const void*’ for argument ‘2’ to ‘ssize_t write(int, const void*, size_t)’
+      n = write(communicati, output, sizeof(output));
+                                                   ^
+make: *** [src/client_sender.o] Error 1
+21:34:48 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:57:10: error: request for member ‘push_back’ in ‘output’, which is of non-class type ‘char [255]’
+   output.push_back(tmp);
+          ^
+make: *** [src/client_sender.o] Error 1
+21:34:53 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:35:04 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:36:50 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:37:13 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:37:29 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:63:15: error: no match for ‘operator*’ (operand type is ‘__gnu_cxx::__alloc_traits<std::allocator<std::basic_string<char> > >::value_type {aka std::basic_string<char>}’)
+  std::cout << *buffer.at(0) << std::endl;
+               ^
+make: *** [src/server_listener.o] Error 1
+21:39:23 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:57:44: error: cannot convert ‘std::vector<std::basic_string<char> >’ to ‘void*’ for argument ‘2’ to ‘ssize_t read(int, void*, size_t)’
+  n = read(newsockfd, buffer, sizeof(buffer));
+                                            ^
+../src/server_listener.cpp:63:15: error: no match for ‘operator*’ (operand type is ‘__gnu_cxx::__alloc_traits<std::allocator<std::basic_string<char> > >::value_type {aka std::basic_string<char>}’)
+  std::cout << *buffer.at(0) << std::endl;
+               ^
+make: *** [src/server_listener.o] Error 1
+21:39:34 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:63:15: error: no match for ‘operator*’ (operand type is ‘__gnu_cxx::__alloc_traits<std::allocator<std::basic_string<char> > >::value_type {aka std::basic_string<char>}’)
+  std::cout << *buffer.at(0) << std::endl;
+               ^
+make: *** [src/server_listener.o] Error 1
+21:39:41 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:41:01 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:42:56 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:63:15: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+  std::cout << buffer << std::endl;
+               ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/server_listener.h:18,
+                 from ../src/server_listener.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::vector<char>]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+make: *** [src/server_listener.o] Error 1
+21:43:04 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:43:19 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:43:55 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:53:30: error: invalid conversion from ‘const char*’ to ‘std::vector<char>::value_type {aka char}’ [-fpermissive]
+   output.push_back(tmp.c_str());
+                              ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:919:7: error:   initializing argument 1 of ‘void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::value_type = char]’ [-fpermissive]
+       push_back(value_type&& __x)
+       ^
+make: *** [src/client_sender.o] Error 1
+21:44:20 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:53:30: error: invalid conversion from ‘const char*’ to ‘std::vector<char>::value_type {aka char}’ [-fpermissive]
+   output.push_back(tmp.c_str());
+                              ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:919:7: error:   initializing argument 1 of ‘void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::value_type = char]’ [-fpermissive]
+       push_back(value_type&& __x)
+       ^
+make: *** [src/client_sender.o] Error 1
+21:44:28 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:53:30: error: invalid conversion from ‘const char*’ to ‘std::vector<char>::value_type {aka char}’ [-fpermissive]
+   output.push_back(tmp.c_str());
+                              ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:919:7: error:   initializing argument 1 of ‘void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::value_type = char]’ [-fpermissive]
+       push_back(value_type&& __x)
+       ^
+make: *** [src/client_sender.o] Error 1
+21:45:36 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:46:14 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:46:21 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+21:46:36 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:46:46 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:48:04 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:48:15 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:49:07 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:49:17 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:53:35 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:53:48 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:57:47: error: cannot convert ‘__gnu_cxx::__alloc_traits<std::allocator<std::basic_string<char> > >::value_type {aka std::basic_string<char>}’ to ‘void*’ for argument ‘2’ to ‘ssize_t read(int, void*, size_t)’
+  n = read(newsockfd, buffer[0], sizeof(buffer));
+                                               ^
+make: *** [src/server_listener.o] Error 1
+21:54:01 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:54:08 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+21:54:16 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:54:35 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:54:58 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:55:20 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:56:39 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:64:22: error: request for member ‘at’ in ‘buffer’, which is of pointer type ‘std::vector<std::basic_string<char> >*’ (maybe you meant to use ‘->’ ?)
+  std::cout << buffer.at(0) << std::endl;
+                      ^
+make: *** [src/server_listener.o] Error 1
+21:57:15 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+21:58:29 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+21:58:51 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:52:33: error: no matching function for call to ‘std::vector<std::basic_string<char> >::vector(std::string&)’
+   std::vector<string> output(tmp);
+                                 ^
+../src/client_sender.cpp:52:33: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note: template<class _InputIterator, class> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&)
+         vector(_InputIterator __first, _InputIterator __last,
+         ^
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note:   template argument deduction/substitution failed:
+../src/client_sender.cpp:52:33: note:   candidate expects 3 arguments, 1 provided
+   std::vector<string> output(tmp);
+                                 ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note: std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(initializer_list<value_type> __l,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::initializer_list<std::basic_string<char> >’
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(vector&& __rv, const allocator_type& __m)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(const vector& __x, const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector(vector&& __x) noexcept
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::vector<std::basic_string<char> >&&’
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector(const vector& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const std::vector<std::basic_string<char> >&’
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = std::basic_string<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(size_type __n, const value_type& __value,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(size_type __n, const allocator_type& __a = allocator_type())
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::vector<std::basic_string<char> >::size_type {aka long unsigned int}’
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note: std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const allocator_type& {aka const std::allocator<std::basic_string<char> >&}’
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note: std::vector<_Tp, _Alloc>::vector() [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector()
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note:   candidate expects 0 arguments, 1 provided
+../src/client_sender.cpp:55:2: error: expected primary-expression before ‘/’ token
+  / output.push_back(tmp);
+  ^
+make: *** [src/client_sender.o] Error 1
+21:58:55 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:52:33: error: no matching function for call to ‘std::vector<std::basic_string<char> >::vector(std::string&)’
+   std::vector<string> output(tmp);
+                                 ^
+../src/client_sender.cpp:52:33: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note: template<class _InputIterator, class> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&)
+         vector(_InputIterator __first, _InputIterator __last,
+         ^
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note:   template argument deduction/substitution failed:
+../src/client_sender.cpp:52:33: note:   candidate expects 3 arguments, 1 provided
+   std::vector<string> output(tmp);
+                                 ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note: std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(initializer_list<value_type> __l,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::initializer_list<std::basic_string<char> >’
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(vector&& __rv, const allocator_type& __m)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(const vector& __x, const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector(vector&& __x) noexcept
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::vector<std::basic_string<char> >&&’
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector(const vector& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const std::vector<std::basic_string<char> >&’
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = std::basic_string<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(size_type __n, const value_type& __value,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(size_type __n, const allocator_type& __a = allocator_type())
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::vector<std::basic_string<char> >::size_type {aka long unsigned int}’
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note: std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const allocator_type& {aka const std::allocator<std::basic_string<char> >&}’
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note: std::vector<_Tp, _Alloc>::vector() [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector()
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note:   candidate expects 0 arguments, 1 provided
+make: *** [src/client_sender.o] Error 1
+21:59:04 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:00:03 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:00:19 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:05:12 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:05:16 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:95:30: error: ‘output’ was not declared in this scope
+      n = write(communicati, &output[0], sizeof(output));
+                              ^
+make: *** [src/client_sender.o] Error 1
+22:05:29 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:06:21 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:06:36 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:07:26 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:08:31 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:08:59 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:09:03 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:10:48 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:11:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:11:21 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:12:18 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:12:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:12:34 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:12:42 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:13:08 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:14:48 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:65:29: error: conversion from ‘std::vector<std::basic_string<char> >’ to non-scalar type ‘std::vector<char>’ requested
+  std::vector<char> reader = buffer;
+                             ^
+../src/server_listener.cpp:69:15: error: ‘output’ was not declared in this scope
+  std::cout << output.at(0) << std::endl;
+               ^
+make: *** [src/server_listener.o] Error 1
+22:14:57 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+../src/server_listener.cpp: In member function ‘void server_listener::listener()’:
+../src/server_listener.cpp:69:15: error: ‘output’ was not declared in this scope
+  std::cout << output.at(0) << std::endl;
+               ^
+make: *** [src/server_listener.o] Error 1
+22:15:07 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:15:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:15:51 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:53:3: error: ‘output’ was not declared in this scope
+   output.push_back(tmp);
+   ^
+make: *** [src/client_sender.o] Error 1
+22:16:04 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:53:3: error: ‘output’ was not declared in this scope
+   output.push_back(tmp);
+   ^
+make: *** [src/client_sender.o] Error 1
+22:16:52 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:17:33 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:18:21 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:18:44 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:19:17 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:19:25 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:20:38 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:67:35: error: ‘handshake’ was not declared in this scope
+   std::cout << "buffer size: " << handshake << std::endl;
+                                   ^
+make: *** [src/client_sender.o] Error 1
+22:20:56 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:21:10 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:21:39 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:21:58 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:22:36 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:23:09 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
+Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:23:37 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:23:50 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:24:01 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:24:11 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:25:31 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:26:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:26:07 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:26:50 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:27:11 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:27:25 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:28:43 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:51:32: error: no matching function for call to ‘std::vector<std::basic_string<char> >::vector(std::string&)’
+   std::vector<string> data (tmp);
+                                ^
+../src/client_sender.cpp:51:32: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note: template<class _InputIterator, class> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&)
+         vector(_InputIterator __first, _InputIterator __last,
+         ^
+/usr/include/c++/4.8/bits/stl_vector.h:392:9: note:   template argument deduction/substitution failed:
+../src/client_sender.cpp:51:32: note:   candidate expects 3 arguments, 1 provided
+   std::vector<string> data (tmp);
+                                ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_sender.h:23,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note: std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(initializer_list<value_type> __l,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:364:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::initializer_list<std::basic_string<char> >’
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(vector&& __rv, const allocator_type& __m)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:340:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(const vector& __x, const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:331:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector(vector&& __x) noexcept
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:327:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::vector<std::basic_string<char> >&&’
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector(const vector& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const std::vector<std::basic_string<char> >&’
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = std::basic_string<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(size_type __n, const value_type& __value,
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:281:7: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(size_type __n, const allocator_type& __a = allocator_type())
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:269:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::vector<std::basic_string<char> >::size_type {aka long unsigned int}’
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note: std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::basic_string<char> >]
+       vector(const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const allocator_type& {aka const std::allocator<std::basic_string<char> >&}’
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note: std::vector<_Tp, _Alloc>::vector() [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       vector()
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note:   candidate expects 0 arguments, 1 provided
+make: *** [src/client_sender.o] Error 1
+22:28:56 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:29:14 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:29:59 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:30:03 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:30:26 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:30:44 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:30:48 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+22:31:12 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:31:22 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:31:42 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:31:56 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:32:04 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:34:01 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:34:42 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:34:47 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+22:35:02 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:35:22 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:35:43 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:36:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:37:12 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:37:14 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:37:29 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+22:37:47 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+22:37:58 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+22:38:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+14:45:41 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:54:13: error: cannot bind ‘std::basic_ostream<char>’ lvalue to ‘std::basic_ostream<char>&&’
+   std::cout << "buffer size: " << data << std::endl;
+             ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/client_sender.h:21,
+                 from ../src/client_sender.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::vector<char>]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+make: *** [src/client_sender.o] Error 1
+14:49:21 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+../src/client_sender.cpp: In member function ‘void client_sender::sendStuff()’:
+../src/client_sender.cpp:54:40: error: ‘class std::vector<char>’ has no member named ‘v’
+   std::cout << "buffer size: " << data.v(0) << std::endl;
+                                        ^
+make: *** [src/client_sender.o] Error 1
+14:50:01 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_sender.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_sender.d" -MT"src/client_sender.d" -o "src/client_sender.o" "../src/client_sender.cpp"
+Finished building: ../src/client_sender.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_sender.o   
+Finished building target: client
+ 
+14:50:06 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 

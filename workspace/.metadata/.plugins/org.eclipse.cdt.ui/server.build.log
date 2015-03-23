@@ -1,0 +1,15 @@
+14:50:06 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_listener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_listener.d" -MT"src/server_listener.d" -o "src/server_listener.o" "../src/server_listener.cpp"
+Finished building: ../src/server_listener.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_listener.o ./src/socket_binder_unix.o   
+Finished building target: server
+ 
+
+14:50:06 Build Finished (took 562ms)
+

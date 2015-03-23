@@ -1,0 +1,26 @@
+//============================================================================
+// Name        : client.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+#include "client.h"
+
+using namespace std:
+
+int main(int argc, char** argv) {
+
+	client_args args;
+
+	try {
+		args.argumentsParsing();
+	} catch (const char* e) {
+		std::cout << "el problema: " << e << std::endl;
+		return 1;
+	}
+
+
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	return 0;
+}

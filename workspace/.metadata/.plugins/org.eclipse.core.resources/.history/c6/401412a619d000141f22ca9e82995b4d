@@ -1,0 +1,53 @@
+/*
+ * client_sender.h
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+
+#include <string>
+#include <utility>
+
+#include <iostream>
+
+#include "client_args.h"
+
+class client_sender {
+public :
+	client_sender(client_args args);
+
+	virtual ~client_sender();
+
+	void connect();
+
+	void sendStuff();
+
+private :
+
+	int socket;
+
+	client_args args;
+
+	static const char* sender_errors[];
+
+	enum sender_errors {	// enums of sebder errors
+		OPENING_ERROR = 0,
+		NOHOST_ERROR = 1,
+		CONNECT_ERROR = 2,
+		WRITE_ERROR = 3,
+		READING_ERROR = 4,
+	};
+
+};
+
+

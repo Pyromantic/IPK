@@ -1,0 +1,34 @@
+/*
+ * client_sender.h
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <utility>
+
+#include "client_args.h"
+
+class client_sender {
+public :
+	client_sender(client_args args);
+
+	virtual ~client_sender();
+
+	void sendQuery();
+
+private :
+
+	client_args args;
+
+	static const char* sender_errors[];
+
+	enum sender_errors {
+
+	};
+
+};
+
+

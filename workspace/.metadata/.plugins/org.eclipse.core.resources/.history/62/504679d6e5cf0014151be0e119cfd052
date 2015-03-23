@@ -1,0 +1,28 @@
+#pragma once
+#include <iostream>
+#include <string>
+
+#include <sys/types.h> 
+#include <sys/socket.h>
+#include <netinet/in.h>
+
+
+class socket_binder {
+public :
+	socket_binder();
+
+	~socket_binder();
+
+private :
+
+	void binder(const int);
+
+	static const char* socket_errors[];
+
+	enum socket_errors {	// enums of server errors
+
+			ERROR_OPENING = 0,
+			ERROR_BINDING = 1,
+		};
+
+};

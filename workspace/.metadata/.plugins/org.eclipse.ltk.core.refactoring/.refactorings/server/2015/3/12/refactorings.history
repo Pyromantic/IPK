@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;server/src/serverlistener.cpp&apos; to &apos;server_listener.cpp&apos;" description="Rename resource &apos;serverlistener.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/serverlistener.cpp" name="server_listener.cpp" stamp="1426958859666" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;server/src/serverlistener.h&apos; to &apos;server_listener.h&apos;" description="Rename resource &apos;serverlistener.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/serverlistener.h" name="server_listener.h" stamp="1426958866929" updateReferences="true"/>
+</session>
