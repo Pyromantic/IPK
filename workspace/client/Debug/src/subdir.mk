@@ -6,17 +6,17 @@
 CPP_SRCS += \
 ../src/client.cpp \
 ../src/client_args.cpp \
-../src/client_sender.cpp 
+../src/client_communication_handle.cpp 
 
 OBJS += \
 ./src/client.o \
 ./src/client_args.o \
-./src/client_sender.o 
+./src/client_communication_handle.o 
 
 CPP_DEPS += \
 ./src/client.d \
 ./src/client_args.d \
-./src/client_sender.d 
+./src/client_communication_handle.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,0 +1,17 @@
+/*
+ * server_args.h
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#ifndef SERVER_ARGS_H_
+#define SERVER_ARGS_H_
+
+class server_args {
+public:
+	server_args();
+	virtual ~server_args();
+};
+
+#endif /* SERVER_ARGS_H_ */

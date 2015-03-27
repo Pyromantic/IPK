@@ -1,2 +1,3 @@
-1427139995579	Delete resource 'server/src/socket_binder_unix.h'
-1427139998698	Delete resource 'server/src/socket_binder_unix.cpp'
+1427302178454	Delete resource 'client'
+1427302270524	Delete resource 'client/src/clientargs.h'
+1427302273169	Delete resource 'client/src/clientargs.cpp'

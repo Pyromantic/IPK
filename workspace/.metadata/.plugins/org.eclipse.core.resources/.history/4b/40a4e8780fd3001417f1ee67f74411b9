@@ -1,0 +1,17 @@
+/*
+ * client_communication_handle.h
+ *
+ *  Created on: Mar 25, 2015
+ *      Author: majk
+ */
+
+#ifndef CLIENT_COMMUNICATION_HANDLE_H_
+#define CLIENT_COMMUNICATION_HANDLE_H_
+
+class client_communication_handle {
+public:
+	client_communication_handle();
+	virtual ~client_communication_handle();
+};
+
+#endif /* CLIENT_COMMUNICATION_HANDLE_H_ */

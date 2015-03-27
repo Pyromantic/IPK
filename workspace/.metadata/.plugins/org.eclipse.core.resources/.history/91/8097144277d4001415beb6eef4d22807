@@ -1,0 +1,17 @@
+/*
+ * server_host_handle.h
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#ifndef SERVER_HOST_HANDLE_H_
+#define SERVER_HOST_HANDLE_H_
+
+class server_host_handle {
+public:
+	server_host_handle();
+	virtual ~server_host_handle();
+};
+
+#endif /* SERVER_HOST_HANDLE_H_ */

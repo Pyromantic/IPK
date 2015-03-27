@@ -15,32 +15,45 @@
 
 #include <iostream>
 
-using std::string;
+using namespace std;
 
 class client_args {
-public:
+
+public :
+
 	client_args();
 
 	virtual ~client_args();
 
 	void argumentsParsing(const unsigned int, char**);
 
-private:
-	string hostname;					// Host name
-	unsigned short int port;			// Port number
-	std::vector<std::string> assortment;// assortment
+private :	// variables
 
-	void argcCheck(const unsigned int);
+	unsigned int port;			// Port number
+	string hostname;			// Host name
+	vector <string> inquiry;	// argument for searching
+	vector <int> filter; 		// filters
 
-	void setHostname(char**);
+private :	// methods | constants | enums
 
-	void setPortNumber(char**);
+	void argcCheck(const unsigned int);	// checks argc
 
-	void setLogin(char**);
+	void setArguments(const unsigned int, char**);	// parse arguments
 
-	void setAssortmentType(const unsigned int, char**);
+	void setHostname(char*);	// sets Hostname
 
-	static const char* client_errors[];
+	void setPortNumber(char*);	// sets Port number
+
+	void setLogin(char*);		// sets Login
+
+	void setInquiry(char*);		// add to inquiry
+
+	inline void nextArg (unsigned int *arg, unsigned int *val) {
+		*arg = *arg + NEXT_ARG;
+		*val = *arg + NEXT_ARG_VAL;	// argument value is based on actual argument
+	};
+
+	static const char* client_errors[];	// list of client errors
 
 	enum client_errors {	// enums of client errors
 		INVALID_PORT_NUMBERS = 0,
@@ -49,17 +62,22 @@ private:
 		MANY_ARGS = 1,
 		ERROR_PORT_NUMBER = 2,
 		ERROR_LOGIN = 3,
-		ERROR_ASSORT_TYPE = 4,
-		ERROR_ASSORT_VALUE = 5,
+		ERROR_ARG_TYPE = 4,
+		ERROR_ARG_VALUE = 5,
 	};
 
 	enum client_argc {		// enums of client arguments
 		MIN_CLIENT_ARGC = 4,
 		MAX_CLIENT_ARGC = 15,
 
+		FIRST_ARG = 1,
+		FIRST_ARG_VALUE = 2,
+
 		FIRST_CHAR = 0,
 		IDENTIFIER = 1,
-		NEXT_ARG = 2,
+
+		NEXT_ARG = 1,
+		NEXT_ARG_VAL = 1,
 
 		HOST_NAME = 1,
 		PORT_NUMBER = 2,
@@ -67,16 +85,18 @@ private:
 		ASSORT_VALUE = 4,
 	};
 
-	enum assortment_types {	// enum of valid assort types for client
-		USER_NAME = '0',
-		UID = '1',
-		GID = '2',
-		WHOLE_NAME = '3',
-		HOME_DIR = '4',
-		LOG_SHELL = '5',
+	enum filter_types {		// enum of valid filter types for client
+		USER_NAME = 0,
+		UID = 1,
+		GID = 2,
+		WHOLE_NAME = 3,
+		HOME_DIR = 4,
+		LOG_SHELL = 5,
+
+		FILER_COUNT = 6,
 	};
 
-public: // getters
+public : // getters methods
 
 	inline string getHostname() const {			// returns hostname
 		return hostname;
@@ -86,10 +106,12 @@ public: // getters
 		return port;
 	}
 
-	inline std::vector<std::string> getAssortment () const {
-		return assortment;
+	inline vector <string> getInquiry () const {	// returns quiry
+		return inquiry;
+	}
+
+	inline vector <int> getFilter () const {		// return filter
+		return filter;
 	}
 
 };
-
-

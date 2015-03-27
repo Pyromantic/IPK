@@ -1,0 +1,18 @@
+/*
+ * server_args.cpp
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#include "server_args.h"
+
+server_args::server_args() {
+	// TODO Auto-generated constructor stub
+
+}
+
+server_args::~server_args() {
+	// TODO Auto-generated destructor stub
+}
+

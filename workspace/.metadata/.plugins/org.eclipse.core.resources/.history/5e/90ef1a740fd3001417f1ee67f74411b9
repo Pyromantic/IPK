@@ -1,0 +1,18 @@
+/*
+ * client_communication_handle.cpp
+ *
+ *  Created on: Mar 25, 2015
+ *      Author: majk
+ */
+
+#include "client_communication_handle.h"
+
+client_communication_handle::client_communication_handle() {
+	// TODO Auto-generated constructor stub
+
+}
+
+client_communication_handle::~client_communication_handle() {
+	// TODO Auto-generated destructor stub
+}
+

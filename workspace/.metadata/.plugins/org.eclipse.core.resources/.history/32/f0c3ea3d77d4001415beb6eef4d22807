@@ -1,0 +1,18 @@
+/*
+ * server_host_handle.cpp
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#include "server_host_handle.h"
+
+server_host_handle::server_host_handle() {
+	// TODO Auto-generated constructor stub
+
+}
+
+server_host_handle::~server_host_handle() {
+	// TODO Auto-generated destructor stub
+}
+

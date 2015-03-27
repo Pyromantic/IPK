@@ -2,7 +2,6 @@
 
 int main (int argc, char *argv[]) {
 
-
 	server_args args;
 
 	try {
@@ -28,7 +27,7 @@ int main (int argc, char *argv[]) {
 	host_handle host;
 
 	try {
-		host.inicializeHost(server.getSocket());
+		host.handleHost(server.getSocket());
 	} catch (const char * e) {
 		server.closeSocket();
 		std::cout << "el problema listenera: " << e << std::endl;

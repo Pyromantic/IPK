@@ -1,0 +1,143 @@
+#include "client_args.h"
+
+client_args::client_args() : port(0) {
+
+};
+
+client_args::~client_args(){
+};
+
+void client_args::argumentsParsing(const unsigned int argc, char** arguments) {
+
+	argcCheck(argc);
+
+	setArguments(argc, arguments);
+
+};
+
+void client_args::setArguments(const unsigned int argc, char **arguments) {	// sets assortment type and value
+
+	unsigned int actualTag (FIRST_ARG);
+	unsigned int actualTagValue (FIRST_ARG_VALUE);
+
+	while (argc > actualTag) {				// iterates over arguments
+
+		string tmp = arguments[actualTag];
+
+		if (tmp.at(FIRST_CHAR) != '-' )		// check prefix
+			throw client_errors[ERROR_ARG_TYPE];
+
+		for (unsigned int i(IDENTIFIER); i < tmp.size(); ++i)
+			switch (tmp.at(i)) {		// dispatch arguments type
+			case 'p' :
+				if ((tmp.size() != 2) || (argc < actualTagValue))
+					throw client_errors[ERROR_ARG_TYPE];
+
+				setPortNumber(arguments[actualTagValue]);
+				nextArg (&actualTag, &actualTagValue);
+				break;
+
+			case 'h' :
+				if ((tmp.size() != 2) || (argc < actualTagValue))
+					throw client_errors[ERROR_ARG_TYPE];
+
+				setHostname(arguments[actualTagValue]);
+				nextArg (&actualTag, &actualTagValue);
+				break;
+
+			case 'l' :
+				if ((tmp.size() != 2) || (argc < actualTagValue))
+					throw client_errors[ERROR_ARG_TYPE];
+
+				inquiry.push_back(tmp);
+
+				do {
+					setInquiry(arguments[actualTagValue]);
+
+					nextArg (&actualTag, &actualTagValue);
+
+				} while (argc >= actualTagValue);
+
+				break;
+
+			case 'u' :
+				if ((tmp.size() != 2) || (argc < actualTagValue))
+						throw client_errors[ERROR_ARG_TYPE];
+
+				inquiry.push_back(tmp);
+
+				do {
+					setInquiry(arguments[actualTagValue]);
+
+					nextArg (&actualTag, &actualTagValue);
+
+				} while (argc >= actualTagValue);
+
+				break;
+
+			case 'L' :
+				filter.push_back(USER_NAME);
+				break;
+
+			case 'U' :
+				filter.push_back(UID);
+				break;
+
+			case 'G' :
+				filter.push_back(GID);
+				break;
+
+			case 'N' :
+				filter.push_back(WHOLE_NAME);
+				break;
+
+			case 'H' :
+				filter.push_back(HOME_DIR);
+				break;
+
+			case 'S' :
+				filter.push_back(LOG_SHELL);
+				break;
+
+			default:
+				throw client_errors[ERROR_ARG_TYPE];
+				break;
+			}
+		nextArg (&actualTag, &actualTagValue);
+	}
+};
+
+void client_args::argcCheck(const unsigned int argc) {		// method of arguments numeric check
+	if (argc < MIN_CLIENT_ARGC)
+		throw client_errors[FEW_ARGS];
+
+	if (argc > MAX_CLIENT_ARGC)
+		throw client_errors[MANY_ARGS];
+};
+
+void client_args::setHostname(char *argument) {	// sets host name
+	hostname = argument;
+};
+
+void client_args::setPortNumber(char *argument) {	// sets port number
+	int check = atoi(argument);
+
+	if (check <= INVALID_PORT_NUMBERS)
+		throw client_errors[ERROR_PORT_NUMBER];
+
+	port = static_cast<unsigned int>(check);
+}
+
+void client_args::setInquiry (char *argument) {		// sets inquiry
+	string tmp = argument;
+	inquiry.push_back(tmp);
+}
+
+const char* client_args::client_errors[] {	// list of client errors
+	"too few arguments to a successful client call",
+	"too many arguments to a successful client call",
+	"invalid port number",
+	"third argument must be login",
+	"argument must be an valid identifiers type",
+	"argument value is not set properly for given argument",
+};

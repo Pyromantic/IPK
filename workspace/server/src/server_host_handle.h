@@ -16,7 +16,7 @@ public :
 
 	virtual ~host_handle();
 
-	void inicializeHost(int);
+	void handleHost(int);
 
 private :
 
@@ -24,7 +24,7 @@ private :
 
 	void acceptHost(int);
 
-	void getArguments();
+	std::vector <std::string> getArguments();
 
 	unsigned int getArgc();
 

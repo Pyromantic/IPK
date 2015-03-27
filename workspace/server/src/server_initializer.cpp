@@ -23,9 +23,7 @@ void server_initializer::inicializeServer(const unsigned int port) {
 		if (listener < 0)
 			throw socket_errors[ERROR_OPENING];
 
-		struct sockaddr_in serv_addr;
-
-		bzero((char *)&serv_addr, sizeof(serv_addr));
+		struct sockaddr_in serv_addr{};
 
 		serv_addr.sin_family = AF_INET;
 

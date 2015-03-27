@@ -9,11 +9,13 @@ host_handle::~host_handle() {
 
 }
 
-void host_handle::inicializeHost (int listener) {	// Initial host
+void host_handle::handleHost (int listener) {	// Initial host
 
 	acceptHost(listener);	// accept host and sets host socket
 
-	getArguments();			// get arguments
+	vector <string> arguments (move(getArguments()));	// get arguments
+
+	// TODO	arguments parsing notifying selection listeners notifying selection listeners
 
 	close (hostSocket);		// close host socket
 }
@@ -24,29 +26,33 @@ void host_handle::acceptHost (int listener) {
 
 	unsigned int clilen = sizeof(cli_addr);
 
-	hostSocket = accept(listener, (struct sockaddr *)(&cli_addr), &clilen);
+	hostSocket = accept(listener, (struct sockaddr *) (&cli_addr), &clilen);
 
 	nCheck (hostSocket, ACCEPT_ERROR);
-}
+};
 
-void host_handle::getArguments () {			// gets arguments
+vector <string> host_handle::getArguments () {			// gets arguments
 
+	unsigned int argc (move(getArgc()));	// handshake - receiving argc
 
-	unsigned int argc (getArgc());	// handshake - receiving argc
+	vector <string> arguments (argc);
 
 	cout << argc << endl;
 
-	for (; argc > 0; --argc) {
+	for (; argc > 0; --argc) {						// iterate until all arguments are loaded
 
-		unsigned int bufferSize (getBufferSize());	// handshake - receiving bufferSize
+		unsigned int bufferSize (move(getBufferSize()));	// handshake - receiving bufferSize
 
 		cout << bufferSize << endl;
 
-		string message (getArgument(bufferSize));	// actual message receiver
+		string message (move(getArgument(bufferSize)));	// actual message receiver
 
 		cout << message << endl;
+
+		arguments.push_back(message);
 	}
 
+	return arguments;
 }
 
 unsigned int host_handle::getArgc () {			// handshake - receiving argc

@@ -1,0 +1,17 @@
+/*
+ * clientargs.h
+ *
+ *  Created on: Mar 25, 2015
+ *      Author: majk
+ */
+
+#ifndef CLIENTARGS_H_
+#define CLIENTARGS_H_
+
+class client_args {
+public:
+	client_args();
+	virtual ~client_args();
+};
+
+#endif /* CLIENTARGS_H_ */

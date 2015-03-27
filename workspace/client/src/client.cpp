@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : client.cpp
-// Author      : 
+// Author      :
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
@@ -11,6 +11,10 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
+
+	// client -p 12705 -h majk -l olda -N -U -S
+	// client -p 12705 -h majk -u 1994 -N -U -S
+
 	client_args args;
 
 	try {
@@ -19,10 +23,15 @@ int main(int argc, char** argv) {
 		cout << "el problema: " << e << endl;
 		return 1;
 	}
-	client_sender sender;
+
+	client_communication_handle communicati;
 
 	try {
-		sender.sendArguments(args);
+
+		communicati.beginCommunication(args.getPortNumber(), args.getHostname());
+
+		communicati.sendArguments(args.getInquiry(), args.getFilter());
+
 	} catch (const char* e) {
 		cout << "el problema sendera: " << e << endl;
 		return 1;

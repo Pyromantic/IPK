@@ -1,0 +1,18 @@
+/*
+ * clientargs.cpp
+ *
+ *  Created on: Mar 25, 2015
+ *      Author: majk
+ */
+
+#include "clientargs.h"
+
+client_args::client_args() {
+	// TODO Auto-generated constructor stub
+
+}
+
+client_args::~client_args() {
+	// TODO Auto-generated destructor stub
+}
+
