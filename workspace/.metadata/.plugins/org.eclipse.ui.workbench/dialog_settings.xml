@@ -2,7 +2,6 @@
 <section name="Workbench">
 	<section name="PreferencesImportWizard">
 		<item value="/home/majk/Desktop/theme-11797.epf" key=""/>
-		<item value="/home/majk/Desktop/theme-11797.epf" key=""/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="/home/majk/Desktop/theme-11797.epf"/>
 			<item value="/home/majk/Desktop/theme-7525.epf"/>
@@ -10,8 +9,8 @@
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="45" key="DIALOG_Y_ORIGIN"/>
-		<item value="955" key="DIALOG_X_ORIGIN"/>
+		<item value="115" key="DIALOG_Y_ORIGIN"/>
+		<item value="553" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
 	</section>

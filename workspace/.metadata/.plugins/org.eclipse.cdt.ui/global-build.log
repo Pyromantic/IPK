@@ -1,74 +1,8 @@
-12:58:42 **** Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
-Finished building: ../src/client.cpp
+15:20:45 **** Clean-only build of configuration Debug for project server ****
+make clean 
+rm -rf  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o  ./src/server.d ./src/server_args.d ./src/server_host_handle.d ./src/server_initializer.d  server
  
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp:136:40: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
- const char* client_args::client_errors[] { // list of client errors
-                                        ^
-Finished building: ../src/client_args.cpp
- 
-Building file: ../src/client_communication_handle.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
-../src/client_communication_handle.cpp: In member function ‘void client_communication_handle::beginCommunication(unsigned int, std::string)’:
-../src/client_communication_handle.cpp:21:21: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
-  struct sockaddr_in serv_addr{};
-                     ^
-../src/client_communication_handle.cpp:23:18: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
-  struct hostent *server{};
-                  ^
-../src/client_communication_handle.cpp:23:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
-  struct hostent *server{};
-                         ^
-../src/client_communication_handle.cpp: At global scope:
-../src/client_communication_handle.cpp:93:56: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
- const char* client_communication_handle::sender_errors[] { // list of client errors
-                                                        ^
-Finished building: ../src/client_communication_handle.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-12:58:44 **** Build of configuration Debug for project server ****
-make all 
-Building file: ../src/server.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
-Finished building: ../src/server.cpp
- 
-Building file: ../src/server_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_args.d" -MT"src/server_args.d" -o "src/server_args.o" "../src/server_args.cpp"
-../src/server_args.cpp:36:40: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
- const char* server_args::server_errors[] {
-                                        ^
-Finished building: ../src/server_args.cpp
- 
-Building file: ../src/server_host_handle.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
-../src/server_host_handle.cpp: In member function ‘void host_handle::handleHost(int)’:
-../src/server_host_handle.cpp:16:48: error: ‘move’ was not declared in this scope
-  vector <string> arguments (move(getArguments())); // get arguments
-                                                ^
-../src/server_host_handle.cpp: In member function ‘std::vector<std::basic_string<char> > host_handle::getArguments()’:
-../src/server_host_handle.cpp:36:35: error: ‘move’ was not declared in this scope
-  unsigned int argc (move(getArgc())); // handshake - receiving argc
-                                   ^
-../src/server_host_handle.cpp: At global scope:
-../src/server_host_handle.cpp:91:42: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
- const char* host_handle::listener_errors[] {
-                                          ^
-make: *** [src/server_host_handle.o] Error 1
-13:01:22 **** Incremental Build of configuration Debug for project server ****
+15:20:53 **** Build of configuration Debug for project server ****
 make all 
 Building file: ../src/server.cpp
 Invoking: GCC C++ Compiler
@@ -95,598 +29,1253 @@ Invoking: GCC C++ Linker
 g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o   
 Finished building target: server
  
-13:03:59 **** Incremental Build of configuration Debug for project client ****
+15:21:15 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client.cpp
+Building file: ../src/server_host_handle.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
-Finished building: ../src/client.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
  
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building file: ../src/client_communication_handle.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
-Finished building: ../src/client_communication_handle.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:04:39 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:05:22 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:05:34 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:05:35 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:05:36 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:06:26 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:06:28 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:06:28 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:10:50 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:04 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:13 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:21 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:29 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:42 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:47 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:11:52 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:13:56 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:14:12 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:14:20 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-13:14:59 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:15:05 **** Incremental Build of configuration Debug for project server ****
-make all 
 Building target: server
 Invoking: GCC C++ Linker
 g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o   
 Finished building target: server
  
-13:15:14 **** Incremental Build of configuration Debug for project client ****
+17:53:48 **** Incremental Build of configuration Debug for project server ****
 make all 
-make: Nothing to be done for `all'.
-13:15:14 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:15:27 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:15:37 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:15:37 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:15:40 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:15:43 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:15:48 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:15:54 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:16:19 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:16:43 **** Incremental Build of configuration Debug for project server ****
-make all 
-make: Nothing to be done for `all'.
-13:16:50 **** Incremental Build of configuration Debug for project client ****
-make all 
-make: Nothing to be done for `all'.
-13:24:31 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client.cpp
+Building file: ../src/server.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
-Finished building: ../src/client.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+In file included from ../src/server.h:6:0,
+                 from ../src/server.cpp:1:
+../src/server_host_handle.h:13:33: fatal error: server_users_parser.h: No such file or directory
+ #include <server_users_parser.h>
+                                 ^
+compilation terminated.
+make: *** [src/server.o] Error 1
+17:54:37 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+In file included from ../src/server_host_handle.h:13:0,
+                 from ../src/server.h:6,
+                 from ../src/server.cpp:1:
+../src/server_users_parser.h:16:29: error: expected ‘)’ before ‘<’ token
+  server_users_parser(vector <string>);
+                             ^
+../src/server_users_parser.h:24:2: error: ‘vector’ does not name a type
+  vector <string> inquiry;
+  ^
+../src/server_users_parser.h:26:2: error: ‘vector’ does not name a type
+  vector <string> output;
+  ^
+make: *** [src/server.o] Error 1
+17:55:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
  
-Building file: ../src/client_args.cpp
+Building file: ../src/server_host_handle.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:52:41: error: invalid user-defined conversion from ‘char’ to ‘std::vector<std::basic_string<char> >::value_type&& {aka std::basic_string<char>&&}’ [-fpermissive]
-     inquiry.push_back(tmp.at(IDENTIFIER));
-                                         ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: note: candidate is: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] <near match>
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘char’ to ‘const char*’
-../src/client_args.cpp:52:41: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-     inquiry.push_back(tmp.at(IDENTIFIER));
-                                         ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp:52:41: error: conversion to non-const reference type ‘std::vector<std::basic_string<char> >::value_type&& {aka class std::basic_string<char>&&}’ from rvalue of type ‘std::basic_string<char>’ [-fpermissive]
-     inquiry.push_back(tmp.at(IDENTIFIER));
-                                         ^
-../src/client_args.cpp:67:41: error: invalid user-defined conversion from ‘char’ to ‘std::vector<std::basic_string<char> >::value_type&& {aka std::basic_string<char>&&}’ [-fpermissive]
-     inquiry.push_back(tmp.at(IDENTIFIER));
-                                         ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: note: candidate is: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] <near match>
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-/usr/include/c++/4.8/bits/basic_string.h:490:7: note:   no known conversion for argument 1 from ‘char’ to ‘const char*’
-../src/client_args.cpp:67:41: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-     inquiry.push_back(tmp.at(IDENTIFIER));
-                                         ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp:67:41: error: conversion to non-const reference type ‘std::vector<std::basic_string<char> >::value_type&& {aka class std::basic_string<char>&&}’ from rvalue of type ‘std::basic_string<char>’ [-fpermissive]
-     inquiry.push_back(tmp.at(IDENTIFIER));
-                                         ^
-make: *** [src/client_args.o] Error 1
-13:33:09 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:52:49: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-     inquiry.push_back(string (tmp.at(IDENTIFIER)));
-                                                 ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp:67:49: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-     inquiry.push_back(string (tmp.at(IDENTIFIER)));
-                                                 ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-make: *** [src/client_args.o] Error 1
-13:33:25 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:52:30: error: expected primary-expression before ‘callback’
-     inquiry.push_back(string callback(tmp.at(IDENTIFIER)));
-                              ^
-../src/client_args.cpp:67:30: error: expected primary-expression before ‘callback’
-     inquiry.push_back(string callback(tmp.at(IDENTIFIER)));
-                              ^
-make: *** [src/client_args.o] Error 1
-13:34:00 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:52:62: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-     inquiry.push_back(static_cast <string>(tmp.at(IDENTIFIER)));
-                                                              ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp:67:62: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-     inquiry.push_back(static_cast <string>(tmp.at(IDENTIFIER)));
-                                                              ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-make: *** [src/client_args.o] Error 1
-13:49:38 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:24:26: error: parameter declared ‘auto’
-  auto toString = [](auto chars) {
-                          ^
-../src/client_args.cpp: In lambda function:
-../src/client_args.cpp:25:21: error: ‘chars’ was not declared in this scope
-   string callback = chars;
-                     ^
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:31:45: error: no match for call to ‘(client_args::setArguments(unsigned int, char**)::__lambda0) (char*&)’
-   string tmp = toString(arguments[actualTag]);
-                                             ^
-../src/client_args.cpp:24:19: note: candidates are:
-  auto toString = [](auto chars) {
-                   ^
-../src/client_args.cpp:31:45: note: std::basic_string<char> (*)() <conversion>
-   string tmp = toString(arguments[actualTag]);
-                                             ^
-../src/client_args.cpp:31:45: note:   candidate expects 1 argument, 2 provided
-../src/client_args.cpp:24:31: note: client_args::setArguments(unsigned int, char**)::__lambda0
-  auto toString = [](auto chars) {
-                               ^
-../src/client_args.cpp:24:31: note:   candidate expects 0 arguments, 1 provided
-../src/client_args.cpp:58:50: error: no match for call to ‘(client_args::setArguments(unsigned int, char**)::__lambda0) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:24:19: note: candidates are:
-  auto toString = [](auto chars) {
-                   ^
-../src/client_args.cpp:58:50: note: std::basic_string<char> (*)() <conversion>
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:58:50: note:   candidate expects 1 argument, 2 provided
-../src/client_args.cpp:24:31: note: client_args::setArguments(unsigned int, char**)::__lambda0
-  auto toString = [](auto chars) {
-                               ^
-../src/client_args.cpp:24:31: note:   candidate expects 0 arguments, 1 provided
-../src/client_args.cpp:73:50: error: no match for call to ‘(client_args::setArguments(unsigned int, char**)::__lambda0) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:24:19: note: candidates are:
-  auto toString = [](auto chars) {
-                   ^
-../src/client_args.cpp:73:50: note: std::basic_string<char> (*)() <conversion>
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:73:50: note:   candidate expects 1 argument, 2 provided
-../src/client_args.cpp:24:31: note: client_args::setArguments(unsigned int, char**)::__lambda0
-  auto toString = [](auto chars) {
-                               ^
-../src/client_args.cpp:24:31: note:   candidate expects 0 arguments, 1 provided
-make: *** [src/client_args.o] Error 1
-13:49:57 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In lambda function:
-../src/client_args.cpp:25:22: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-   string callback = *chars;
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::handleHost(int)’:
+../src/server_host_handle.cpp:18:22: error: no matching function for call to ‘server_users_parser::server_users_parser()’
+  server_users_parser parser;
                       ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+../src/server_host_handle.cpp:18:22: note: candidates are:
+In file included from ../src/server_host_handle.h:13:0,
+                 from ../src/server_host_handle.cpp:1:
+../src/server_users_parser.h:17:2: note: server_users_parser::server_users_parser(std::vector<std::basic_string<char> >)
+  server_users_parser(vector <string>);
+  ^
+../src/server_users_parser.h:17:2: note:   candidate expects 1 argument, 0 provided
+../src/server_users_parser.h:15:7: note: server_users_parser::server_users_parser(const server_users_parser&)
+ class server_users_parser {
        ^
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:58:50: error: invalid conversion from ‘char’ to ‘char*’ [-fpermissive]
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:24:32: error:   initializing argument 1 of ‘client_args::setArguments(unsigned int, char**)::__lambda0’ [-fpermissive]
-  auto toString = [](char *chars) {
-                                ^
-../src/client_args.cpp:73:50: error: invalid conversion from ‘char’ to ‘char*’ [-fpermissive]
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:24:32: error:   initializing argument 1 of ‘client_args::setArguments(unsigned int, char**)::__lambda0’ [-fpermissive]
-  auto toString = [](char *chars) {
-                                ^
-make: *** [src/client_args.o] Error 1
-13:50:12 **** Incremental Build of configuration Debug for project client ****
+../src/server_users_parser.h:15:7: note:   candidate expects 1 argument, 0 provided
+../src/server_host_handle.cpp: At global scope:
+../src/server_host_handle.cpp:112:1: error: ‘c’ does not name a type
+ c
+ ^
+make: *** [src/server_host_handle.o] Error 1
+17:55:12 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_host_handle.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In lambda function:
-../src/client_args.cpp:25:22: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-   string callback = *chars;
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::handleHost(int)’:
+../src/server_host_handle.cpp:18:22: error: no matching function for call to ‘server_users_parser::server_users_parser()’
+  server_users_parser parser;
                       ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:27:2: error: conversion from ‘client_args::setArguments(unsigned int, char**)::__lambda0’ to non-scalar type ‘std::string {aka std::basic_string<char>}’ requested
-  };
+../src/server_host_handle.cpp:18:22: note: candidates are:
+In file included from ../src/server_host_handle.h:13:0,
+                 from ../src/server_host_handle.cpp:1:
+../src/server_users_parser.h:17:2: note: server_users_parser::server_users_parser(std::vector<std::basic_string<char> >)
+  server_users_parser(vector <string>);
   ^
-../src/client_args.cpp:31:45: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char*&)’
-   string tmp = toString(arguments[actualTag]);
-                                             ^
-../src/client_args.cpp:58:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:73:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-make: *** [src/client_args.o] Error 1
-13:50:27 **** Incremental Build of configuration Debug for project client ****
+../src/server_users_parser.h:17:2: note:   candidate expects 1 argument, 0 provided
+../src/server_users_parser.h:15:7: note: server_users_parser::server_users_parser(const server_users_parser&)
+ class server_users_parser {
+       ^
+../src/server_users_parser.h:15:7: note:   candidate expects 1 argument, 0 provided
+make: *** [src/server_host_handle.o] Error 1
+17:56:26 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_host_handle.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In lambda function:
-../src/client_args.cpp:25:21: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-   string callback = chars;
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_initializer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_initializer.d" -MT"src/server_initializer.d" -o "src/server_initializer.o" "../src/server_initializer.cpp"
+../src/server_initializer.cpp: In constructor ‘server_initializer::server_initializer()’:
+../src/server_initializer.cpp:10:44: error: class ‘server_initializer’ does not have any field named ‘hostSocket’
+ server_initializer::server_initializer() : hostSocket(0) {
+                                            ^
+make: *** [src/server_initializer.o] Error 1
+17:57:07 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_initializer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_initializer.d" -MT"src/server_initializer.d" -o "src/server_initializer.o" "../src/server_initializer.cpp"
+Finished building: ../src/server_initializer.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp:26:39: warning: character constant too long for its type [enabled by default]
+ const char* host_handle::path2passwd {'/home/majk/secured/passwd'};
+                                       ^
+../src/server_users_parser.cpp:26:13: error: ‘host_handle’ has not been declared
+ const char* host_handle::path2passwd {'/home/majk/secured/passwd'};
+             ^
+../src/server_users_parser.cpp:26:66: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+ const char* host_handle::path2passwd {'/home/majk/secured/passwd'};
+                                                                  ^
+make: *** [src/server_users_parser.o] Error 1
+17:58:30 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp:24:47: warning: character constant too long for its type [enabled by default]
+ const char* server_users_parser::path2passwd {'/home/majk/secured/passwd'};
+                                               ^
+../src/server_users_parser.cpp:24:74: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+ const char* server_users_parser::path2passwd {'/home/majk/secured/passwd'};
+                                                                          ^
+make: *** [src/server_users_parser.o] Error 1
+17:58:54 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp:24:47: warning: character constant too long for its type [enabled by default]
+ const char* server_users_parser::path2passwd {'/home/majk/secured/passwd'};
+                                               ^
+../src/server_users_parser.cpp:24:74: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+ const char* server_users_parser::path2passwd {'/home/majk/secured/passwd'};
+                                                                          ^
+make: *** [src/server_users_parser.o] Error 1
+17:59:10 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+18:30:54 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+18:54:41 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::applyInquiry()’:
+../src/server_users_parser.cpp:25:13: error: ‘parseLines’ was not declared in this scope
+  parseLines();
+             ^
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:49:40: error: no matching function for call to ‘end()’
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+../src/server_users_parser.cpp:49:40: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_vector.h:63:0,
+                 from /usr/include/c++/4.8/vector:64,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/initializer_list:99:5: note: template<class _Tp> constexpr const _Tp* std::end(std::initializer_list<_Tp>)
+     end(initializer_list<_Tp> __ils) noexcept
+     ^
+/usr/include/c++/4.8/initializer_list:99:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+In file included from /usr/include/c++/4.8/vector:66:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/range_access.h:68:5: note: template<class _Container> decltype (__cont.end()) std::end(_Container&)
+     end(_Container& __cont) -> decltype(__cont.end())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:68:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+In file included from /usr/include/c++/4.8/vector:66:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/range_access.h:78:5: note: template<class _Container> decltype (__cont.end()) std::end(const _Container&)
+     end(const _Container& __cont) -> decltype(__cont.end())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:78:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+In file included from /usr/include/c++/4.8/vector:66:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/range_access.h:97:5: note: template<class _Tp, long unsigned int _Nm> _Tp* std::end(_Tp (&)[_Nm])
+     end(_Tp (&__arr)[_Nm])
+     ^
+/usr/include/c++/4.8/bits/range_access.h:97:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+../src/server_users_parser.cpp:51:11: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+   cout << it << endl;
+           ^
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/fstream:38,
+                 from ../src/server_users_parser.h:12,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+../src/server_users_parser.cpp: At global scope:
+../src/server_users_parser.cpp:59:39: error: two or more data types in declaration of ‘openPasswd’
+ void server_users_parser::openPasswd () {
+                                       ^
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ };
+ ^
+make: *** [src/server_users_parser.o] Error 1
+18:54:54 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::applyInquiry()’:
+../src/server_users_parser.cpp:25:13: error: ‘parseLines’ was not declared in this scope
+  parseLines();
+             ^
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:49:40: error: no matching function for call to ‘end()’
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+../src/server_users_parser.cpp:49:40: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_vector.h:63:0,
+                 from /usr/include/c++/4.8/vector:64,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/initializer_list:99:5: note: template<class _Tp> constexpr const _Tp* std::end(std::initializer_list<_Tp>)
+     end(initializer_list<_Tp> __ils) noexcept
+     ^
+/usr/include/c++/4.8/initializer_list:99:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+In file included from /usr/include/c++/4.8/vector:66:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/range_access.h:68:5: note: template<class _Container> decltype (__cont.end()) std::end(_Container&)
+     end(_Container& __cont) -> decltype(__cont.end())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:68:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+In file included from /usr/include/c++/4.8/vector:66:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/range_access.h:78:5: note: template<class _Container> decltype (__cont.end()) std::end(const _Container&)
+     end(const _Container& __cont) -> decltype(__cont.end())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:78:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+In file included from /usr/include/c++/4.8/vector:66:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/range_access.h:97:5: note: template<class _Tp, long unsigned int _Nm> _Tp* std::end(_Tp (&)[_Nm])
+     end(_Tp (&__arr)[_Nm])
+     ^
+/usr/include/c++/4.8/bits/range_access.h:97:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:49:40: note:   candidate expects 1 argument, 0 provided
+  for (auto it = line.begin(); it < end(); ++it) {
+                                        ^
+../src/server_users_parser.cpp:51:11: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+   cout << it << endl;
+           ^
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/fstream:38,
+                 from ../src/server_users_parser.h:12,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+../src/server_users_parser.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ };
+ ^
+make: *** [src/server_users_parser.o] Error 1
+18:55:15 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::applyInquiry()’:
+../src/server_users_parser.cpp:25:13: error: ‘parseLines’ was not declared in this scope
+  parseLines();
+             ^
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:51:11: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+   cout << it << endl;
+           ^
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/fstream:38,
+                 from ../src/server_users_parser.h:12,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+../src/server_users_parser.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ };
+ ^
+make: *** [src/server_users_parser.o] Error 1
+18:55:22 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::applyInquiry()’:
+../src/server_users_parser.cpp:25:13: error: ‘parseLines’ was not declared in this scope
+  parseLines();
+             ^
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:51:15: error: expected primary-expression before ‘<<’ token
+   cout << it* << endl;
+               ^
+../src/server_users_parser.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ };
+ ^
+make: *** [src/server_users_parser.o] Error 1
+18:55:30 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::applyInquiry()’:
+../src/server_users_parser.cpp:25:13: error: ‘parseLines’ was not declared in this scope
+  parseLines();
+             ^
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ };
+ ^
+make: *** [src/server_users_parser.o] Error 1
+18:55:42 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::applyInquiry()’:
+../src/server_users_parser.cpp:25:13: error: ‘parseLines’ was not declared in this scope
+  parseLines();
+             ^
+make: *** [src/server_users_parser.o] Error 1
+18:55:53 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+18:56:03 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:51:11: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+   cout << it << endl;
+           ^
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/fstream:38,
+                 from ../src/server_users_parser.h:12,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+make: *** [src/server_users_parser.o] Error 1
+18:56:11 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+18:57:42 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:49:21: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+  cout << line.begin() << endl;
                      ^
-In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:27:2: error: conversion from ‘client_args::setArguments(unsigned int, char**)::__lambda0’ to non-scalar type ‘std::string {aka std::basic_string<char>}’ requested
-  };
-  ^
-../src/client_args.cpp:31:45: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char*&)’
-   string tmp = toString(arguments[actualTag]);
-                                             ^
-../src/client_args.cpp:58:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:73:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-make: *** [src/client_args.o] Error 1
-13:50:43 **** Incremental Build of configuration Debug for project client ****
-make all 
-Building file: ../src/client_args.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In lambda function:
-../src/client_args.cpp:25:22: error: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
-   string callback = *chars;
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/fstream:38,
+                 from ../src/server_users_parser.h:12,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+../src/server_users_parser.cpp:51:22: error: no match for ‘operator<’ (operand types are ‘char’ and ‘std::basic_string<char>::iterator {aka __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >}’)
+  for (char it(0); it < line.end(); ++it) {
                       ^
+../src/server_users_parser.cpp:51:22: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_pair.h:220:5: note: template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:220:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::pair<_T1, _T2>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:297:5: note: template<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:297:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:347:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:347:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:1055:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator<(const move_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1055:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::move_iterator<_Iterator>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:1061:5: note: template<class _Iterator> bool std::operator<(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator<(const move_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1061:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::move_iterator<_Iterator>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:1421:5: note: template<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_vector.h:1421:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::vector<_Tp, _Alloc>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
 In file included from /usr/include/c++/4.8/string:52:0,
-                 from ../src/client_args.h:10,
-                 from ../src/client_args.cpp:1:
-/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
-       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
-       ^
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:27:2: error: conversion from ‘client_args::setArguments(unsigned int, char**)::__lambda0’ to non-scalar type ‘std::string {aka std::basic_string<char>}’ requested
-  };
-  ^
-../src/client_args.cpp:31:45: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char*&)’
-   string tmp = toString(arguments[actualTag]);
-                                             ^
-../src/client_args.cpp:58:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:73:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-make: *** [src/client_args.o] Error 1
-13:50:51 **** Incremental Build of configuration Debug for project client ****
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2569:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2569:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2581:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2581:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2593:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2593:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const _CharT*’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:836:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator<(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:836:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:830:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator<(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:830:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:51:33: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’ and ‘char’
+  for (char it(0); it < line.end(); ++it) {
+                                 ^
+make: *** [src/server_users_parser.o] Error 1
+18:57:48 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_users_parser.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:24:28: error: parameter declared ‘auto’
-  string toString = [](auto chars) {
-                            ^
-../src/client_args.cpp: In lambda function:
-../src/client_args.cpp:25:21: error: ‘chars’ was not declared in this scope
-   string callback = chars;
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:49:21: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+  cout << line.begin() << endl;
                      ^
-../src/client_args.cpp: In member function ‘void client_args::setArguments(unsigned int, char**)’:
-../src/client_args.cpp:27:2: error: conversion from ‘client_args::setArguments(unsigned int, char**)::__lambda0’ to non-scalar type ‘std::string {aka std::basic_string<char>}’ requested
-  };
-  ^
-../src/client_args.cpp:31:45: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char*&)’
-   string tmp = toString(arguments[actualTag]);
-                                             ^
-../src/client_args.cpp:58:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-../src/client_args.cpp:73:50: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (char&)’
-     inquiry.push_back(toString(tmp.at(IDENTIFIER)));
-                                                  ^
-make: *** [src/client_args.o] Error 1
-13:51:53 **** Incremental Build of configuration Debug for project client ****
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/fstream:38,
+                 from ../src/server_users_parser.h:12,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+make: *** [src/server_users_parser.o] Error 1
+18:58:12 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_users_parser.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
  
-Building target: client
+Building target: server
 Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
  
-13:58:16 **** Incremental Build of configuration Debug for project client ****
+18:58:48 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_users_parser.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
-14:00:32 **** Incremental Build of configuration Debug for project client ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘int server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:50:27: error: cannot convert ‘std::basic_string<char>::iterator {aka __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >}’ to ‘char’ in initialization
+  for (char it(line.begin()); it < line.end(); ++it) {
+                           ^
+../src/server_users_parser.cpp:50:33: error: no match for ‘operator<’ (operand types are ‘char’ and ‘std::basic_string<char>::iterator {aka __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >}’)
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                 ^
+../src/server_users_parser.cpp:50:33: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_pair.h:220:5: note: template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:220:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::pair<_T1, _T2>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:297:5: note: template<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:297:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:347:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:347:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:1055:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator<(const move_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1055:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::move_iterator<_Iterator>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:1061:5: note: template<class _Iterator> bool std::operator<(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator<(const move_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1061:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::move_iterator<_Iterator>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:1421:5: note: template<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_vector.h:1421:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::vector<_Tp, _Alloc>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2569:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2569:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2581:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2581:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2593:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2593:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const _CharT*’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:836:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator<(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:836:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/stl_iterator.h:830:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator<(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:830:5: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:50:44: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’ and ‘char’
+  for (char it(line.begin()); it < line.end(); ++it) {
+                                            ^
+../src/server_users_parser.cpp:52:12: error: invalid type argument of unary ‘*’ (have ‘char’)
+   cout << *it << endl;
+            ^
+make: *** [src/server_users_parser.o] Error 1
+18:58:59 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_users_parser.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
  
-Building target: client
+Building target: server
 Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
  
-14:01:49 **** Incremental Build of configuration Debug for project client ****
+18:59:20 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/client_args.cpp
+Building file: ../src/server_users_parser.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
-Finished building: ../src/client_args.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
  
-Building target: client
+Building target: server
 Invoking: GCC C++ Linker
-g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+18:59:35 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+18:59:37 **** Incremental Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+18:59:50 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:00:04 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::parseFile()’:
+../src/server_users_parser.cpp:34:6: warning: unused variable ‘i’ [-Wunused-variable]
+  int i(-1);
+      ^
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:00:33 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:00:41 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:00:53 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:01:05 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:01:17 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:09:18 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::parseLine(std::string)’:
+../src/server_users_parser.cpp:43:23: error: expected primary-expression before ‘.’ token
+  auto nameEnd = string.find(":");
+                       ^
+make: *** [src/server_users_parser.o] Error 1
+19:09:28 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:09:41 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:20:01 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::parseFile()’:
+../src/server_users_parser.cpp:36:17: error: no matching function for call to ‘std::vector<std::basic_string<char> >::erase(int)’
+  inquiry.erase(0);
+                 ^
+../src/server_users_parser.cpp:36:17: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/vector.tcc:134:5: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >; typename std::_Vector_base<_Tp, _Alloc>::pointer = std::basic_string<char>*]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:134:5: note:   no known conversion for argument 1 from ‘int’ to ‘std::vector<std::basic_string<char> >::iterator {aka __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >}’
+/usr/include/c++/4.8/bits/vector.tcc:146:5: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::iterator) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >; typename std::_Vector_base<_Tp, _Alloc>::pointer = std::basic_string<char>*]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:146:5: note:   candidate expects 2 arguments, 1 provided
+make: *** [src/server_users_parser.o] Error 1
+19:20:13 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::parseFile()’:
+../src/server_users_parser.cpp:36:17: error: no matching function for call to ‘std::vector<std::basic_string<char> >::erase(int)’
+  inquiry.erase(0);
+                 ^
+../src/server_users_parser.cpp:36:17: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from ../src/server_users_parser.h:10,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/vector.tcc:134:5: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >; typename std::_Vector_base<_Tp, _Alloc>::pointer = std::basic_string<char>*]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:134:5: note:   no known conversion for argument 1 from ‘int’ to ‘std::vector<std::basic_string<char> >::iterator {aka __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >}’
+/usr/include/c++/4.8/bits/vector.tcc:146:5: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::iterator) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >; typename std::_Vector_base<_Tp, _Alloc>::pointer = std::basic_string<char>*]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:146:5: note:   candidate expects 2 arguments, 1 provided
+make: *** [src/server_users_parser.o] Error 1
+19:20:22 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:20:40 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::parseFile()’:
+../src/server_users_parser.cpp:34:34: error: conversion from ‘std::vector<std::basic_string<char> >::iterator {aka __gnu_cxx::__normal_iterator<std::basic_string<char>*, std::vector<std::basic_string<char> > >}’ to non-scalar type ‘std::string {aka std::basic_string<char>}’ requested
+  string switcher = inquiry.begin();
+                                  ^
+make: *** [src/server_users_parser.o] Error 1
+19:21:05 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:21:30 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:22:11 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+19:22:26 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:35:17 **** Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:35:49 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:37:43 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:38:05 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:40:25 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:41:06 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:42:47 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:43:25 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:43:36 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+../src/server_users_parser.cpp: In member function ‘void server_users_parser::initialize()’:
+../src/server_users_parser.cpp:90:34: error: no matching function for call to ‘std::basic_string<char>::append()’
+   output.push_back(prefix.append());
+                                  ^
+../src/server_users_parser.cpp:90:34: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/server_users_parser.h:11,
+                 from ../src/server_users_parser.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:973:7: note: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       append(const basic_string& __str);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:973:7: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.8/bits/basic_string.h:989:7: note: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       append(const basic_string& __str, size_type __pos, size_type __n);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:989:7: note:   candidate expects 3 arguments, 0 provided
+/usr/include/c++/4.8/bits/basic_string.h:998:7: note: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       append(const _CharT* __s, size_type __n);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:998:7: note:   candidate expects 2 arguments, 0 provided
+/usr/include/c++/4.8/bits/basic_string.h:1006:7: note: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       append(const _CharT* __s)
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:1006:7: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.8/bits/basic_string.h:1021:7: note: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       append(size_type __n, _CharT __c);
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:1021:7: note:   candidate expects 2 arguments, 0 provided
+/usr/include/c++/4.8/bits/basic_string.h:1030:7: note: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       append(initializer_list<_CharT> __l)
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:1030:7: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.8/bits/basic_string.h:1044:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+         append(_InputIterator __first, _InputIterator __last)
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:1044:9: note:   template argument deduction/substitution failed:
+../src/server_users_parser.cpp:90:34: note:   candidate expects 2 arguments, 0 provided
+   output.push_back(prefix.append());
+                                  ^
+make: *** [src/server_users_parser.o] Error 1
+21:43:43 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:43:55 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:44:07 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+21:44:41 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
  

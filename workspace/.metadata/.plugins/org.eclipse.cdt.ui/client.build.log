@@ -1,9 +1,19 @@
-14:01:49 **** Incremental Build of configuration Debug for project client ****
+15:17:17 **** Incremental Build of configuration Debug for project client ****
 make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
 Building file: ../src/client_args.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_args.d" -MT"src/client_args.d" -o "src/client_args.o" "../src/client_args.cpp"
 Finished building: ../src/client_args.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
  
 Building target: client
 Invoking: GCC C++ Linker
@@ -11,5 +21,5 @@ g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_
 Finished building target: client
  
 
-14:01:50 Build Finished (took 573ms)
+15:17:18 Build Finished (took 1s.391ms)
 

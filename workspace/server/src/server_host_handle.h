@@ -10,6 +10,10 @@
 #include <iostream>
 #include <vector>
 
+#include "server_users_parser.h"
+
+using namespace std;
+
 class host_handle {
 public :
 	host_handle();
@@ -24,20 +28,22 @@ private :
 
 	void acceptHost(int);
 
-	std::vector <std::string> getArguments();
-
-	unsigned int getArgc();
+	vector <string> getInquiry();
 
 	unsigned int getBufferSize();
 
-	std::string getArgument (unsigned int);
+	string getArgument (unsigned int);
+
+	vector <char> getFilter();
+
+	unsigned int getArgc();
 
 	inline void nCheck (int n, int ERROR_TYPE) {
 		if (n < 0) {
 			close(hostSocket);
 			throw listener_errors[ERROR_TYPE];
 		}
-	}
+	};
 
 	static const char* listener_errors[];
 

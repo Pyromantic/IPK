@@ -1,7 +1,5 @@
 #include "server_host_handle.h"
 
-using namespace std;
-
 host_handle::host_handle() : hostSocket(0) {
 }
 
@@ -13,9 +11,13 @@ void host_handle::handleHost (int listener) {	// Initial host
 
 	acceptHost(listener);	// accept host and sets host socket
 
-	vector <string> arguments (move(getArguments()));	// get arguments
+	vector <string> inquiry (getInquiry());	// get inquiry
 
-	// TODO	arguments parsing notifying selection listeners notifying selection listeners
+	vector <char> filter (getFilter());		// get filter
+
+	server_users_parser parser (inquiry);
+
+	// TODO	sending parsed user data back to client
 
 	close (hostSocket);		// close host socket
 }
@@ -31,38 +33,22 @@ void host_handle::acceptHost (int listener) {
 	nCheck (hostSocket, ACCEPT_ERROR);
 };
 
-vector <string> host_handle::getArguments () {			// gets arguments
+vector <string> host_handle::getInquiry () {			// gets arguments
 
-	unsigned int argc (move(getArgc()));	// handshake - receiving argc
+	unsigned int argc (getArgc());	// handshake - receiving argc
 
-	vector <string> arguments (argc);
+	vector <string> inquiry (argc);
 
-	cout << argc << endl;
+	for (; argc > 0; --argc) {				// iterate until all arguments are loaded
 
-	for (; argc > 0; --argc) {						// iterate until all arguments are loaded
+		unsigned int bufferSize (getBufferSize());	// handshake - receiving bufferSize
 
-		unsigned int bufferSize (move(getBufferSize()));	// handshake - receiving bufferSize
+		string message (getArgument(bufferSize));		// actual message receiver
 
-		cout << bufferSize << endl;
+		inquiry.push_back(message);
+	};
 
-		string message (move(getArgument(bufferSize)));	// actual message receiver
-
-		cout << message << endl;
-
-		arguments.push_back(message);
-	}
-
-	return arguments;
-}
-
-unsigned int host_handle::getArgc () {			// handshake - receiving argc
-	unsigned int argc;
-
-	int n = read(hostSocket, &argc, sizeof(argc));
-
-	nCheck(n, READING_ERROR);
-
-	return argc;
+	return inquiry;
 }
 
 unsigned int host_handle::getBufferSize () {	// handshake - receiving bufferSize
@@ -86,7 +72,35 @@ string host_handle::getArgument (unsigned int bufferSize) {				// actual message
 	string str (buffer.begin(), buffer.end());
 
 	return str;
-}
+};
+
+vector <char> host_handle::getFilter () {
+
+	unsigned int bufferSize (getArgc());
+
+	vector <char> buffer;
+
+	if (bufferSize)
+		buffer.resize(bufferSize);
+	else
+		return buffer;
+
+	int n = read (hostSocket, &buffer[0], bufferSize);
+
+	nCheck(n, READING_ERROR);
+
+	return buffer;
+};
+
+unsigned int host_handle::getArgc () {			// handshake - receiving argc
+	unsigned int argc(0);
+
+	int n = read(hostSocket, &argc, sizeof(argc));
+
+	nCheck(n, READING_ERROR);
+
+	return argc;
+};
 
 const char* host_handle::listener_errors[] {
 	"ERROR on accept",
@@ -94,3 +108,5 @@ const char* host_handle::listener_errors[] {
 	"ERROR writing to socket",
 	"Unknown transmit error",
 };
+
+

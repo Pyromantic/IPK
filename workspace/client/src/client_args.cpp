@@ -12,7 +12,6 @@ void client_args::argumentsParsing(const unsigned int argc, char** arguments) {
 	argcCheck(argc);
 
 	setArguments(argc, arguments);
-
 };
 
 void client_args::setArguments(const unsigned int argc, char **arguments) {	// sets assortment type and value
@@ -106,9 +105,9 @@ void client_args::setArguments(const unsigned int argc, char **arguments) {	// s
 			default:
 				throw client_errors[ERROR_ARG_TYPE];
 				break;
-			}
+			};
 		nextArg (&actualTag, &actualTagValue);
-	}
+	};
 };
 
 void client_args::argcCheck(const unsigned int argc) {		// method of arguments numeric check

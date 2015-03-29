@@ -32,7 +32,7 @@ private :	// variables
 	unsigned int port;			// Port number
 	string hostname;			// Host name
 	vector <string> inquiry;	// argument for searching
-	vector <int> filter; 		// filters
+	vector <char> filter; 		// filters
 
 private :	// methods | constants | enums
 
@@ -110,7 +110,7 @@ public : // getters methods
 		return inquiry;
 	}
 
-	inline vector <int> getFilter () const {		// return filter
+	inline vector <char> getFilter () const {		// return filter
 		return filter;
 	}
 

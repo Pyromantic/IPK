@@ -1,6 +1,15 @@
-13:16:43 **** Incremental Build of configuration Debug for project server ****
+21:44:41 **** Incremental Build of configuration Debug for project server ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
 
-13:16:43 Build Finished (took 70ms)
+21:44:41 Build Finished (took 565ms)
 

@@ -40,14 +40,19 @@ void client_communication_handle::beginCommunication (unsigned int port, string 
         throw sender_errors[CONNECT_ERROR];
 }
 
-void client_communication_handle::sendArguments (vector <string> inquiry, vector <int> filter) {	// sends server arguments
+void client_communication_handle::sendArguments (vector <string> inquiry, vector <char> filter) {	// sends server arguments
 
-	unsigned int argc (inquiry.size());
+	sendArgc (inquiry.size());	// sends number of inquiry arguments to server
 
-	sendArgc (argc);									// sends number of arguments
+	for (auto it (inquiry.begin()); it < inquiry.end(); ++it) 	// iterates over arguments
+		sendArgument (*it);		// sends single argument to server
 
-	for (vector <string>::iterator it (inquiry.begin()); it < inquiry.end() ; ++it) 			// iterates over arguments
-		sendArgument(*it);								// sends single argument to server
+	unsigned int argc = filter.size();
+
+	sendArgc (argc);			// sends number of filter arguments to server
+
+	if (argc)
+		sendFilter (filter);	// send whole filter vector
 
 	// TODO receive message containing proceeded query
 
@@ -69,15 +74,11 @@ void client_communication_handle::sendArgument (string argument) {
 
 		string output(data.begin(), data.end());
 
-		cout << "buffered info: " << output << endl;
-
-		int n;
+		int n(0);
 
 		// hand shake - send bufferSize
 
 		unsigned int bufferSize = data.size();
-
-		cout << "buffer size: " << bufferSize << endl;
 
 		n = write(communicati, &bufferSize , sizeof(bufferSize));
 
@@ -88,6 +89,13 @@ void client_communication_handle::sendArgument (string argument) {
 	    n = write(communicati, &data[0], bufferSize);
 
 		nCheck (n, WRITE_ERROR);
+};
+
+void client_communication_handle::sendFilter (vector <char> filter) {
+
+	int n = write(communicati, &filter[0], filter.size());
+
+	nCheck (n, WRITE_ERROR);
 };
 
 const char* client_communication_handle::sender_errors[] {	// list of client errors

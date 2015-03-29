@@ -7,19 +7,22 @@ CPP_SRCS += \
 ../src/server.cpp \
 ../src/server_args.cpp \
 ../src/server_host_handle.cpp \
-../src/server_initializer.cpp 
+../src/server_initializer.cpp \
+../src/server_users_parser.cpp 
 
 OBJS += \
 ./src/server.o \
 ./src/server_args.o \
 ./src/server_host_handle.o \
-./src/server_initializer.o 
+./src/server_initializer.o \
+./src/server_users_parser.o 
 
 CPP_DEPS += \
 ./src/server.d \
 ./src/server_args.d \
 ./src/server_host_handle.d \
-./src/server_initializer.d 
+./src/server_initializer.d \
+./src/server_users_parser.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

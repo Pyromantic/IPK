@@ -12,7 +12,6 @@ void server_args::argumentsParsing(const int argc, char **arguments) {	// parsin
 	argcCheck(argc);
 
 	setPort(arguments);
-
 }
 
 void server_args::argcCheck(const int argc) {	// method of arguments numeric check

@@ -1,0 +1,49 @@
+/*
+ * server_users_parser.h
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <vector>
+#include <string>
+#include <fstream>
+
+#include <iostream>
+
+using namespace std;
+
+class server_users_parser {
+public:
+	server_users_parser(vector <string>);
+
+	virtual ~server_users_parser();
+
+private :	// variables
+
+	ifstream file;				// passwd file
+
+	vector <string> inquiry;
+
+	vector <string> output;
+
+private :	//  methods
+
+	void applyInquiry();
+
+	void parseLine();
+
+	void openPasswd();
+
+	inline void closePasswd();
+
+	static const char* path2passwd;	// path to passwd file
+
+public : // getters functions
+
+	vector <string> getOutput () const {	// returns output
+		return output;
+	};
+};

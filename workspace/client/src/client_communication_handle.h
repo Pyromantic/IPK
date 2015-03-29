@@ -33,13 +33,15 @@ public :
 
 	void beginCommunication (unsigned int, string);	// establish communicating socket
 
-	void sendArguments(vector <string>, vector <int>);
+	void sendArguments(vector <string>, vector <char>);
 
 private :
 
 	void sendArgc(const unsigned int);
 
 	void sendArgument(string);
+
+	void sendFilter (vector <char> filter);
 
 	int communicati;
 
@@ -52,7 +54,7 @@ private :
 
 	static const char* sender_errors[];
 
-	enum sender_errors {	// enums of sebder errors
+	enum sender_errors {	// enums of server errors
 		OPENING_ERROR = 0,
 		NOHOST_ERROR = 1,
 		CONNECT_ERROR = 2,

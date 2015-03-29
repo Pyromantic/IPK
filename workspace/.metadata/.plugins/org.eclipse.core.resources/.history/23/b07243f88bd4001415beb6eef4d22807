@@ -1,0 +1,66 @@
+/*
+ * client_sender.h
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+
+#include <string>
+#include <utility>
+
+#include <iostream>
+
+#include <vector>
+							// bunch of libraries
+
+using namespace std;
+
+class client_communication_handle {
+public :
+	client_communication_handle();
+
+	virtual ~client_communication_handle();
+
+	void beginCommunication (unsigned int, string);	// establish communicating socket
+
+	void sendArguments(vector <string>, vector <int>);
+
+private :
+
+	void sendArgc(const unsigned int);
+
+	void sendArgument(string);
+
+	void sendFilter (vector <char> filter);
+
+	int communicati;
+
+	inline void nCheck (int n, int ERROR_TYPE) {
+		if (n < 0) {
+			close(communicati);
+			throw sender_errors[ERROR_TYPE];
+		}
+	}
+
+	static const char* sender_errors[];
+
+	enum sender_errors {	// enums of server errors
+		OPENING_ERROR = 0,
+		NOHOST_ERROR = 1,
+		CONNECT_ERROR = 2,
+		WRITE_ERROR = 3,
+		READ_ERROR = 4,
+		TRANSMIT_ERROR = 5,
+	};
+
+};
