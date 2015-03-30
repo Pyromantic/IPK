@@ -21,6 +21,10 @@ int main (int argc, char *argv[]) {
 
 	vet.push_back(tmp);
 
+	tmp = "lala52";
+
+	vet.push_back(tmp);
+
 	tmp = "xhodan08";
 
 	vet.push_back(tmp);
@@ -29,7 +33,19 @@ int main (int argc, char *argv[]) {
 
 	vet.push_back(tmp);
 
-	server_users_parser parser(vet);
+	tmp = "xhodan03";
+
+	vet.push_back(tmp);
+
+	tmp = "xhodan";
+
+	vet.push_back(tmp);
+
+	std::vector <char> filter;
+
+	filter.push_back(1);
+
+	server_users_parser parser(vet, filter);
 
 
 	cout << endl << "yayay IM Lorde" << endl;

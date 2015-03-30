@@ -15,7 +15,7 @@ void host_handle::handleHost (int listener) {	// Initial host
 
 	vector <char> filter (getFilter());		// get filter
 
-	server_users_parser parser (inquiry);
+	server_users_parser parser (inquiry, filter);
 
 	// TODO	sending parsed user data back to client
 

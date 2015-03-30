@@ -1,0 +1,84 @@
+/*
+ * server_users_parser.cpp
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#include "server_users_parser.h"
+
+server_users_parser::server_users_parser (vector <string> inquirySetter) {
+	inquiry = inquirySetter;
+
+	initialize();
+
+	applyInquiry();
+};
+
+server_users_parser::~server_users_parser() {
+
+};
+
+
+void server_users_parser::applyInquiry () {
+
+	openPasswd();
+
+	parseFile();
+
+	closePasswd();
+
+	for (auto it(output.begin()); it < output.end();++it)
+		cout << *it << endl;
+
+
+};
+
+void server_users_parser::parseFile () {
+
+	string line;
+
+	string switcher = *inquiry.begin();
+
+	inquiry.erase(inquiry.begin());
+
+	while (!getline(file, line).eof()) {
+		parseLine(line);
+	};
+
+};
+
+void server_users_parser::parseLine (string line) {
+
+	auto nameEnd = line.find(":");
+
+	string name(line.substr(FIRST_CHAR, nameEnd));
+
+	for (auto it (inquiry.begin()); it < inquiry.end(); ++it)
+		if (!name.compare(*it)) {
+			auto position = it - inquiry.begin();
+			output.at(position) = line;
+			inquiry.erase(it);
+		}
+};
+
+void server_users_parser::openPasswd () {
+	file.open(path2passwd, ifstream::in);	// open passwd for reading
+
+	if (file.is_open())		// if its open
+		return;
+
+};
+
+void server_users_parser::closePasswd() {
+	file.close();
+};
+
+void server_users_parser::initialize() {
+	for (auto it(inquiry.begin() + SWITCHER); it < inquiry.end(); ++it)
+		output.push_back(defaultLoginOutput + *it);
+};
+
+const char* server_users_parser::defaultLoginOutput {"Chyba: neznamy login "};
+
+const char* server_users_parser::path2passwd {"/home/majk/secured/passwd"};

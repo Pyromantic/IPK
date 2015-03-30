@@ -1,0 +1,117 @@
+/*
+ * client_args.h
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <string>
+#include <cstring>
+#include <stdlib.h>
+#include <utility>
+#include <vector>
+
+#include <iostream>
+
+using namespace std;
+
+class client_args {
+
+public :
+
+	client_args();
+
+	virtual ~client_args();
+
+	void argumentsParsing(const unsigned int, char**);
+
+private :	// variables
+
+	unsigned int port;			// Port number
+	string hostname;			// Host name
+	vector <string> inquiry;	// argument for searching
+	vector <char> filter; 		// filters
+
+private :	// methods | constants | enums
+
+	void argcCheck(const unsigned int);	// checks argc
+
+	void setArguments(const unsigned int, char**);	// parse arguments
+
+	void setHostname(char*);	// sets Hostname
+
+	void setPortNumber(char*);	// sets Port number
+
+	void setLogin(char*);		// sets Login
+
+	void setInquiry(char*);		// add to inquiry
+
+	inline void nextArg (unsigned int *arg, unsigned int *val) {
+		*arg = *arg + NEXT_ARG;
+		*val = *arg + NEXT_ARG_VAL;	// argument value is based on actual argument
+	};
+
+	static const char* client_errors[];	// list of client errors
+
+	enum client_errors {	// enums of client errors
+		INVALID_PORT_NUMBERS = 0,
+
+		FEW_ARGS = 0,
+		MANY_ARGS = 1,
+		ERROR_PORT_NUMBER = 2,
+		ERROR_LOGIN = 3,
+		ERROR_ARG_TYPE = 4,
+		ERROR_ARG_VALUE = 5,
+	};
+
+	enum client_argc {		// enumerationss of client arguments
+		MIN_CLIENT_ARGC = 4,
+		MAX_CLIENT_ARGC = 15,
+
+		FIRST_ARG = 1,
+		FIRST_ARG_VALUE = 2,
+
+		FIRST_CHAR = 0,
+		IDENTIFIER = 1,
+
+		NEXT_ARG = 1,
+		NEXT_ARG_VAL = 1,
+
+		HOST_NAME = 1,
+		PORT_NUMBER = 2,
+		ASSORT_TAG = 3,
+		ASSORT_VALUE = 4,
+	};
+
+	enum filter_types {		// enumerations of valid filter types for client
+		USER_NAME = 0,
+		UID = 1,
+		GID = 2,
+		WHOLE_NAME = 3,
+		HOME_DIR = 4,
+		LOG_SHELL = 5,
+
+		FILER_COUNT = 6,
+	};
+
+public : // getters methods
+
+	inline string getHostname() const {			// returns hostname
+		return hostname;
+	}
+
+	inline int getPortNumber() const {			// returns port number
+		return port;
+	}
+
+	inline vector <string> getInquiry () const {	// returns quiry
+		return inquiry;
+	}
+
+	inline vector <char> getFilter () const {		// return filter
+		return filter;
+	}
+
+};

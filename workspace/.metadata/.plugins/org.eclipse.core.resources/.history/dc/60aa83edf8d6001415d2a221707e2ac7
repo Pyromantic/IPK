@@ -1,0 +1,85 @@
+/*
+ * server_users_parser.h
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <vector>
+#include <string>
+#include <fstream>
+
+#include <iostream>
+
+using namespace std;
+
+class server_users_parser {
+public:
+	server_users_parser(vector <string>, vector <char>);
+
+	virtual ~server_users_parser();
+
+private :	// variables
+
+	ifstream file;				// passwd file
+
+	vector <char> filter;		// output filter
+
+	vector <string> inquiry;	// client's inquiry
+
+	vector <int> offsets;		// vector of valid offsets
+
+	vector <string> output;		// output
+
+	/*  methods | constants | enumerations */
+
+	string getSwitcher();	// switch between seeking arguments
+
+	void applyInquiry();	// applies inquiry
+
+	void applyFilter();		// applies filter
+
+	/* file operations methods */
+
+	void parseFile();			// parse through lines of file
+
+	void openPasswd();			// opens passwd file
+
+	inline void closePasswd();	// closes passwd file
+
+	/* initialization method */
+
+	void initialize (vector <string>, vector <char>);	// initialization
+
+	/* enumerations */
+
+	enum string_consts {
+		FIRST_CHAR = 0,
+		SWITCHER = 1,
+	};
+
+	enum filter_types {		// enumerations of valid filter types for client
+		USER_NAME = 0,
+		UID = 1,
+		GID = 2,
+		WHOLE_NAME = 3,
+		HOME_DIR = 4,
+		LOG_SHELL = 5,
+
+		FILER_COUNT = 6,
+	};
+
+	/* constants */
+
+	static const char* defaultLoginOutput;	// default output value
+
+	static const char* path2passwd;			// path to passwd file
+
+public : // getters functions
+
+	vector <string> getOutput () const {	// returns output
+		return output;
+	};
+};

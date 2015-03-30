@@ -1,4 +1,4 @@
-21:44:41 **** Incremental Build of configuration Debug for project server ****
+19:04:11 **** Incremental Build of configuration Debug for project server ****
 make all 
 Building file: ../src/server_users_parser.cpp
 Invoking: GCC C++ Compiler
@@ -11,5 +11,5 @@ g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o 
 Finished building target: server
  
 
-21:44:41 Build Finished (took 565ms)
+19:04:12 Build Finished (took 730ms)
 

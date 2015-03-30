@@ -34,13 +34,13 @@ private :	// variables
 	vector <string> inquiry;	// argument for searching
 	vector <char> filter; 		// filters
 
-private :	// methods | constants | enums
+private :	// methods | constants | enumerations
 
 	void argcCheck(const unsigned int);	// checks argc
 
 	void setArguments(const unsigned int, char**);	// parse arguments
 
-	void setHostname(char*);	// sets Hostname
+	void setHostname(char*);	// sets Host name
 
 	void setPortNumber(char*);	// sets Port number
 
@@ -55,7 +55,7 @@ private :	// methods | constants | enums
 
 	static const char* client_errors[];	// list of client errors
 
-	enum client_errors {	// enums of client errors
+	enum client_errors {	// enumerations of client errors
 		INVALID_PORT_NUMBERS = 0,
 
 		FEW_ARGS = 0,
@@ -66,7 +66,7 @@ private :	// methods | constants | enums
 		ERROR_ARG_VALUE = 5,
 	};
 
-	enum client_argc {		// enums of client arguments
+	enum client_argc {		// enumerations of client arguments
 		MIN_CLIENT_ARGC = 4,
 		MAX_CLIENT_ARGC = 15,
 
@@ -85,7 +85,7 @@ private :	// methods | constants | enums
 		ASSORT_VALUE = 4,
 	};
 
-	enum filter_types {		// enum of valid filter types for client
+	enum filter_types {		// enumerations of valid filter types for client
 		USER_NAME = 0,
 		UID = 1,
 		GID = 2,

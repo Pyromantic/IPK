@@ -10,6 +10,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <sstream>
 
 #include <iostream>
 
@@ -17,24 +18,35 @@ using namespace std;
 
 class server_users_parser {
 public:
-	server_users_parser(vector <string>);
+	/* constructor | destructor */
+	server_users_parser(vector <string>, vector <char>);
 
 	virtual ~server_users_parser();
 
-private :	// variables
+private :
+	/* variables */
 
 	ifstream file;				// passwd file
 
+	vector <char> filter;		// output filter
+
 	vector <string> inquiry;	// client's inquiry
+
+	vector <int> offsets;		// vector of valid offsets
 
 	vector <string> output;		// output
 
-private :	//  methods | constants | enumerations
+	/*  methods | constants | enumerations */
 
+	string getSwitcher();	// switch between seeking arguments
 
-	void applyInquiry();
+	void applyInquiry();	// applies inquiry
 
-	void parseLine (string);
+	void applyFilter();		// applies filter
+
+	string filterData(string);		// filters given string
+
+	vector <string> explodeString(string);	// explodes given string
 
 	/* file operations methods */
 
@@ -46,7 +58,7 @@ private :	//  methods | constants | enumerations
 
 	/* initialization method */
 
-	void initialize();			// initialize output vector
+	void initialize (vector <string>, vector <char>);	// initialization
 
 	/* enumerations */
 
@@ -55,13 +67,26 @@ private :	//  methods | constants | enumerations
 		SWITCHER = 1,
 	};
 
+	enum filter_types {		// enumerations of valid filter types for client
+		USER_NAME = 0,
+		UID = 1,
+		GID = 2,
+		WHOLE_NAME = 3,
+		HOME_DIR = 4,
+		LOG_SHELL = 5,
+
+		FILER_COUNT = 6,
+		PASSWD = 1,
+	};
+
 	/* constants */
 
 	static const char* defaultLoginOutput;	// default output value
 
-	static const char* path2passwd;		// path to passwd file
+	static const char* path2passwd;			// path to passwd file
 
-public : // getters functions
+public :
+	/* getters functions */
 
 	vector <string> getOutput () const {	// returns output
 		return output;
