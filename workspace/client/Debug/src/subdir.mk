@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/basic_communication.cpp \
 ../src/client.cpp \
 ../src/client_args.cpp \
 ../src/client_communication_handle.cpp 
 
 OBJS += \
+./src/basic_communication.o \
 ./src/client.o \
 ./src/client_args.o \
 ./src/client_communication_handle.o 
 
 CPP_DEPS += \
+./src/basic_communication.d \
 ./src/client.d \
 ./src/client_args.d \
 ./src/client_communication_handle.d 

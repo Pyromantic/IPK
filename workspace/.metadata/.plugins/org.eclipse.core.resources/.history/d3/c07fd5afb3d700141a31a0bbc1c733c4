@@ -1,0 +1,63 @@
+#include "server_host_handle.h"
+
+host_handle::host_handle() : hostSocket(0) {
+}
+
+host_handle::~host_handle() {
+
+}
+
+void host_handle::handleHost (int listener) {	// Initial host
+
+	acceptHost(listener);	// accept host and sets host socket
+
+	vector <string> inquiry (receiveVector());	// get inquiry
+
+	vector <char> filter (getFilter());		// get filter
+
+	server_users_parser parser (inquiry, filter);	// dig data
+
+	vector <string> output (parser.getOutput());	// gets digged data
+
+	sendVectoroutput(output);		// sends digged data back to client
+
+	close (hostSocket);		// close host socket
+}
+
+void host_handle::acceptHost (int listener) {
+
+	struct sockaddr_in cli_addr;
+
+	unsigned int clilen = sizeof(cli_addr);
+
+	hostSocket = accept(listener, (struct sockaddr *) (&cli_addr), &clilen);
+
+	nCheck (hostSocket, ACCEPT_ERROR);
+};
+
+vector <char> host_handle::getFilter () {
+
+	unsigned int bufferSize (receiveArgc());
+
+	vector <char> buffer;
+
+	if (bufferSize)
+		buffer.resize(bufferSize);
+	else
+		return buffer;
+
+	int n = read (hostSocket, &buffer[0], bufferSize);
+
+	nCheck(n, READING_ERROR);
+
+	return buffer;
+};
+
+const char* host_handle::listener_errors[] {
+	"ERROR on accept",
+	"ERROR reading from socket",
+	"ERROR writing to socket",
+	"Unknown transmit error",
+};
+
+

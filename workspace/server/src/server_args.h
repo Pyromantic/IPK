@@ -5,11 +5,9 @@
 
 class server_args {
 public :
-	server_args();
+	server_args (const int, char**);
 
 	virtual ~server_args();
-
-	void argumentsParsing(const int, char**);
 
 private :
 	int port;
@@ -20,7 +18,7 @@ private :
 
 	static const char* server_errors[];
 
-	enum server_errors {	// enums of server errors
+	enum server_errors {	// enumerations of server errors
 		INVALID_PORT_NUMBERS = 1024,
 
 		FEW_ARGS = 0,
@@ -29,7 +27,7 @@ private :
 		error_PORT_NUMBER = 3,
 	};
 
-	enum server_argc {		// enums of server arguments
+	enum server_argc {		// enumerations of server arguments
 		MIN_SERVER_ARGC = 2,
 		MAX_SERVER_ARGC = 3,
 

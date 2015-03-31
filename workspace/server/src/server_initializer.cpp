@@ -15,23 +15,23 @@ server_initializer::~server_initializer() {
 
 }
 
-void server_initializer::inicializeServer(const unsigned int port) {
+void server_initializer::inicializeServer(const int port) {
 
-		listener = socket(AF_INET, SOCK_STREAM, 0);
+	listener = socket(AF_INET, SOCK_STREAM, 0);
 
-		if (listener < 0)
-			throw socket_errors[ERROR_OPENING];
+	if (listener < 0)
+		throw socket_errors[ERROR_OPENING];
 
-		struct sockaddr_in serv_addr{};
+	struct sockaddr_in serv_addr{};
 
-		serv_addr.sin_family = AF_INET;
+	serv_addr.sin_family = AF_INET;
 
-		serv_addr.sin_addr.s_addr = INADDR_ANY;
+	serv_addr.sin_addr.s_addr = INADDR_ANY;
 
-		serv_addr.sin_port = htons(port);
+	serv_addr.sin_port = htons(port);
 
-		if (bind(listener, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
-			throw socket_errors[ERROR_BINDING];
+	if (bind(listener, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
+		throw socket_errors[ERROR_BINDING];
 }
 
 void server_initializer::startsListening() {

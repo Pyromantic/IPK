@@ -1,0 +1,90 @@
+#include "basic_communication.h"
+
+basic_communication::basic_communication () : hostSocket(0) {
+
+};
+
+basic_communication::~basic_communication () {
+
+};
+
+void basic_communication::sendVector (vector <string> inquiry) {
+	sendArgc (inquiry.size());	// sends number of inquiry arguments to server
+
+	for (auto it (inquiry.begin()); it < inquiry.end(); ++it) 	// iterates over arguments
+		sendString (*it);		// sends single argument to server
+};
+
+void basic_communication::sendString (string argument) {
+
+	vector <char> data (argument.begin(), argument.end());
+
+	string output(data.begin(), data.end());
+
+	// hand shake - send bufferSize
+
+	sendArgc (data.size());
+
+	// sending of actual parameters
+
+	int n = write(hostSocket, &data[0], data.size());
+
+	nCheck (n, WRITE_ERROR);
+};
+
+void basic_communication::sendArgc (const unsigned int argc) { // number of arguments
+
+	int n = write(hostSocket, &argc, sizeof(argc));
+
+	nCheck (n, WRITE_ERROR);
+};
+
+vector <string> basic_communication::getVector () {
+
+	unsigned int argc (getArgc());
+
+	vector <string> output;
+
+	for (; argc > 0; --argc) {				// iterate until all arguments are loaded
+
+			unsigned int bufferSize (getArgc());	// handshake - receiving bufferSize
+
+			string message (getString(bufferSize));	// actual message receiver
+
+			output.push_back(message);
+	};
+
+	return output;
+};
+
+string basic_communication::getString (unsigned int bufferSize) {
+
+	vector <char> buffer (bufferSize);
+
+	int n = read(hostSocket, &buffer[0], buffer.size());
+
+	nCheck (n, READ_ERROR);
+
+	string str (buffer.begin(), buffer.end());
+
+	return str;
+};
+
+unsigned int basic_communication::getArgc () {
+	unsigned int argc(0);
+
+	int n = read(hostSocket, &argc, sizeof(argc));
+
+	nCheck(n, READ_ERROR);
+
+	return argc;
+};
+
+const char* basic_communication ::communication_errors[] {	// list of client errors
+		"ERROR opening socket",
+		"ERROR, no such host",
+		"ERROR connecting",
+		"ERROR writing to socket",
+		"ERROR reading from socket",
+		"ERROR transmitting stuff"
+};

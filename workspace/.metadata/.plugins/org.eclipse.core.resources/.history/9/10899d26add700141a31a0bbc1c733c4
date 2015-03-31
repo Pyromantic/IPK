@@ -1,0 +1,61 @@
+#include "basic_communication.h"
+
+basic_communication::basic_communication () : hostSocket(0) {
+
+};
+
+basic_communication::~basic_communication () {
+
+};
+
+
+
+vector <string> basic_communication::getVector () {
+
+	unsigned int argc (getArgc());
+
+	vector <string> output;
+
+	for (; argc > 0; --argc) {				// iterate until all arguments are loaded
+
+			unsigned int bufferSize (getArgc());	// handshake - receiving bufferSize
+
+			string message (getString(bufferSize));		// actual message receiver
+
+			output.push_back(message);
+	};
+
+	return output;
+};
+
+string basic_communication ::getString (unsigned int bufferSize) {
+
+	vector <char> buffer (bufferSize);
+
+	int n = read(hostSocket, &buffer[0], buffer.size());
+
+	nCheck (n, READ_ERROR);
+
+	string str (buffer.begin(), buffer.end());
+
+	return str;
+};
+
+unsigned int basic_communication ::getArgc () {
+	unsigned int argc(0);
+
+	int n = read(hostSocket, &argc, sizeof(argc));
+
+	nCheck(n, READ_ERROR);
+
+	return argc;
+};
+
+const char* basic_communication ::communication_errors[] {	// list of client errors
+		"ERROR opening socket",
+		"ERROR, no such host",
+		"ERROR connecting",
+		"ERROR writing to socket",
+		"ERROR reading from socket",
+		"ERROR transmitting stuff"
+};

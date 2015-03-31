@@ -4333,3 +4333,1084 @@ Invoking: GCC C++ Linker
 g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
 Finished building target: server
  
+11:12:40 **** Build of configuration Debug for project server ****
+make all 
+make: Nothing to be done for `all'.
+14:23:13 **** Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:59:18: error: ‘std::vector<std::basic_string<char> > client_communication_handle::receiveOutput()’ cannot be overloaded
+  vector <string> receiveOutput();
+                  ^
+../src/client_communication_handle.h:38:7: error: with ‘void client_communication_handle::receiveOutput()’
+  void receiveOutput ();
+       ^
+../src/client.cpp: In function ‘int main(int, char**)’:
+../src/client.cpp:37:10: error: no match for ‘operator=’ (operand types are ‘std::vector<std::basic_string<char> >’ and ‘void’)
+   output = communicati.receiveOutput();
+          ^
+../src/client.cpp:37:10: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from ../src/client_args.h:14,
+                 from ../src/client.h:6,
+                 from ../src/client.cpp:8:
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note:   no known conversion for argument 1 from ‘void’ to ‘const std::vector<std::basic_string<char> >&’
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_args.h:14,
+                 from ../src/client.h:6,
+                 from ../src/client.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:439:7: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:439:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::vector<std::basic_string<char> >&&’
+/usr/include/c++/4.8/bits/stl_vector.h:461:7: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       operator=(initializer_list<value_type> __l)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:461:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::initializer_list<std::basic_string<char> >’
+make: *** [src/client.o] Error 1
+14:23:44 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:59:18: error: ‘std::vector<std::basic_string<char> > client_communication_handle::receiveOutput()’ cannot be overloaded
+  vector <string> receiveOutput();
+                  ^
+../src/client_communication_handle.h:38:7: error: with ‘void client_communication_handle::receiveOutput()’
+  void receiveOutput ();
+       ^
+../src/client.cpp: In function ‘int main(int, char**)’:
+../src/client.cpp:39:10: error: no match for ‘operator=’ (operand types are ‘std::vector<std::basic_string<char> >’ and ‘void’)
+   output = communicati.receiveOutput();
+          ^
+../src/client.cpp:39:10: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from ../src/client_args.h:14,
+                 from ../src/client.h:6,
+                 from ../src/client.cpp:8:
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note:   no known conversion for argument 1 from ‘void’ to ‘const std::vector<std::basic_string<char> >&’
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from ../src/client_args.h:14,
+                 from ../src/client.h:6,
+                 from ../src/client.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:439:7: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:439:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::vector<std::basic_string<char> >&&’
+/usr/include/c++/4.8/bits/stl_vector.h:461:7: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = std::basic_string<char>; _Alloc = std::allocator<std::basic_string<char> >]
+       operator=(initializer_list<value_type> __l)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:461:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::initializer_list<std::basic_string<char> >’
+make: *** [src/client.o] Error 1
+14:24:12 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+../src/client_communication_handle.cpp: In member function ‘unsigned int client_communication_handle::getArgc()’:
+../src/client_communication_handle.cpp:133:15: error: ‘hostSocket’ was not declared in this scope
+  int n = read(hostSocket, &argc, sizeof(argc));
+               ^
+../src/client_communication_handle.cpp:135:12: error: ‘READING_ERROR’ was not declared in this scope
+  nCheck(n, READING_ERROR);
+            ^
+make: *** [src/client_communication_handle.o] Error 1
+14:24:25 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+14:24:32 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+../src/server.cpp: In function ‘int main(int, char**)’:
+../src/server.cpp:56:27: error: ‘args’ was not declared in this scope
+   server.inicializeServer(args.getPortNumber());
+                           ^
+make: *** [src/server.o] Error 1
+14:25:29 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_args.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_args.d" -MT"src/server_args.d" -o "src/server_args.o" "../src/server_args.cpp"
+Finished building: ../src/server_args.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::sendOutput(std::vector<std::basic_string<char> >)’:
+../src/server_host_handle.cpp:98:24: error: ‘sendArgc’ was not declared in this scope
+  sendArgc(output.size());
+                        ^
+../src/server_host_handle.cpp: In member function ‘void host_handle::sendString(std::string)’:
+../src/server_host_handle.cpp:117:13: error: ‘WRITE_ERROR’ was not declared in this scope
+  nCheck (n, WRITE_ERROR);
+             ^
+make: *** [src/server_host_handle.o] Error 1
+14:27:46 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::sendArgc(unsigned int)’:
+../src/server_host_handle.cpp:108:36: error: invalid conversion from ‘long unsigned int’ to ‘const void*’ [-fpermissive]
+  n = write(hostSocket &argc, sizeof(argc));
+                                    ^
+../src/server_host_handle.cpp:108:42: error: too few arguments to function ‘ssize_t write(int, const void*, size_t)’
+  n = write(hostSocket &argc, sizeof(argc));
+                                          ^
+In file included from ../src/server_host_handle.h:8:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/unistd.h:366:16: note: declared here
+ extern ssize_t write (int __fd, const void *__buf, size_t __n) __wur;
+                ^
+make: *** [src/server_host_handle.o] Error 1
+14:27:56 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:28:01 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+14:32:54 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:34:38 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:35:05 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:36:07 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+../src/server.cpp: In function ‘int main(int, char**)’:
+../src/server.cpp:48:29: error: ‘vet’ was not declared in this scope
+  server_users_parser parser(vet, filter);
+                             ^
+../src/server.cpp:48:34: error: ‘filter’ was not declared in this scope
+  server_users_parser parser(vet, filter);
+                                  ^
+make: *** [src/server.o] Error 1
+14:36:16 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:37:47 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:37:51 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for `all'.
+14:38:50 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:41:08 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:43:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:44:02 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+14:44:27 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:48:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::handleHost(int)’:
+../src/server_host_handle.cpp:22:2: error: expected ‘(’ before ‘vector’
+  vector <string> output (parser.getOutput()); // gets digged data
+  ^
+../src/server_host_handle.cpp:24:19: error: could not convert ‘host_handle::sendOutput(std::vector<std::basic_string<char> >((*(const std::vector<std::basic_string<char> >*)(& output))))’ from ‘void’ to ‘bool’
+  sendOutput(output);  // sends digged data back to client
+                   ^
+../src/server_host_handle.cpp:26:20: error: expected ‘)’ before ‘;’ token
+  close (hostSocket);  // close host socket
+                    ^
+make: *** [src/server_host_handle.o] Error 1
+14:49:00 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:50:10 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:51:03 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+14:51:52 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:53:45 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘std::vector<std::basic_string<char> > host_handle::getInquiry()’:
+../src/server_host_handle.cpp:41:35: error: ‘inquiry’ was not declared in this scope
+  cout << "delka sracky argc: " << inquiry.size() << endl;
+                                   ^
+../src/server_host_handle.cpp:54:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/server_host_handle.o] Error 1
+14:53:53 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:54:59 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:55:23 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:57:05 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+14:57:08 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+14:57:58 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+14:59:11 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+15:00:08 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_users_parser.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
+Finished building: ../src/server_users_parser.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+15:00:48 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+15:04:33 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+15:05:48 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+15:05:52 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+15:06:56 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::handleHost(int)’:
+../src/server_host_handle.cpp:24:22: error: too few arguments to function ‘int shutdown(int, int)’
+  shutdown (hostSocket);  // close host socket
+                      ^
+In file included from ../src/server_host_handle.h:6:0,
+                 from ../src/server_host_handle.cpp:1:
+/usr/include/x86_64-linux-gnu/sys/socket.h:261:12: note: declared here
+ extern int shutdown (int __fd, int __how) __THROW;
+            ^
+make: *** [src/server_host_handle.o] Error 1
+15:07:06 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+15:29:07 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:47: fatal error: /../../shared/basic_communication.h: No such file or directory
+ #include "/../../shared/basic_communication.h"
+                                               ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:30:25 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:47: fatal error: /../../shared/basic_communication.h: No such file or directory
+ #include "/../../shared/basic_communication.h"
+                                               ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:30:37 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:44: fatal error: /../shared/basic_communication.h: No such file or directory
+ #include "/../shared/basic_communication.h"
+                                            ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:30:52 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:47: fatal error: /../../shared/basic_communication.h: No such file or directory
+ #include "/../../shared/basic_communication.h"
+                                               ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:33:48 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:47: fatal error: /../../shared/basic_communication.h: No such file or directory
+ #include "/../../shared/basic_communication.h"
+                                               ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:34:05 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:41: fatal error: /shared/basic_communication.h: No such file or directory
+ #include "/shared/basic_communication.h"
+                                         ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:36:50 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client.h:7:0,
+                 from ../src/client.cpp:8:
+../src/client_communication_handle.h:26:47: fatal error: /../../shared/basic_communication.h: No such file or directory
+ #include "/../../shared/basic_communication.h"
+                                               ^
+compilation terminated.
+make: *** [src/client.o] Error 1
+15:36:59 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:11:13 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:11:21 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:11:27 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+In file included from ../src/basic_communication.cpp:1:0:
+../src/basic_communication.h: In member function ‘void basic_communication::nCheck(int, int)’:
+../src/basic_communication.h:43:20: error: ‘close’ was not declared in this scope
+    close(hostSocket);
+                    ^
+../src/basic_communication.cpp: In member function ‘void basic_communication::sendString(std::string)’:
+../src/basic_communication.cpp:26:49: error: ‘write’ was not declared in this scope
+  int n = write(hostSocket, &data[0], data.size()); // sending of actual string
+                                                 ^
+../src/basic_communication.cpp: In member function ‘void basic_communication::sendArgc(unsigned int)’:
+../src/basic_communication.cpp:33:47: error: ‘write’ was not declared in this scope
+  int n = write(hostSocket, &argc, sizeof(argc));
+                                               ^
+../src/basic_communication.cpp: In member function ‘std::string basic_communication::getString(unsigned int)’:
+../src/basic_communication.cpp:60:52: error: ‘read’ was not declared in this scope
+  int n = read(hostSocket, &buffer[0], buffer.size());
+                                                    ^
+../src/basic_communication.cpp: In member function ‘unsigned int basic_communication::getArgc()’:
+../src/basic_communication.cpp:72:46: error: ‘read’ was not declared in this scope
+  int n = read(hostSocket, &argc, sizeof(argc));
+                                              ^
+make: *** [src/basic_communication.o] Error 1
+16:11:30 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:13:23 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:13:50 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:13:55 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:26:48 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+../src/basic_communication.cpp: In member function ‘std::vector<std::basic_string<char> > basic_communication::receiveVector()’:
+../src/basic_communication.cpp:40:29: error: ‘getArgc’ was not declared in this scope
+  unsigned int argc (getArgc());
+                             ^
+../src/basic_communication.cpp:48:40: error: ‘getString’ was not declared in this scope
+    string message (getString(bufferSize)); // actual message receiver
+                                        ^
+make: *** [src/basic_communication.o] Error 1
+16:27:25 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+In file included from ../src/client_communication_handle.h:17:0,
+                 from ../src/client.h:7,
+                 from ../src/client.cpp:8:
+../src/basic_communication.h: In function ‘int main(int, char**)’:
+../src/basic_communication.h:25:18: error: ‘std::vector<std::basic_string<char> > basic_communication::receiveVector()’ is protected
+  vector <string> receiveVector ();
+                  ^
+../src/client.cpp:37:38: error: within this context
+   output = communicati.receiveVector();
+                                      ^
+../src/client.cpp:37:38: error: ‘basic_communication’ is not an accessible base of ‘client_communication_handle’
+make: *** [src/client.o] Error 1
+16:32:30 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:41:34 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+../src/server_host_handle.cpp: In member function ‘void host_handle::handleHost(int)’:
+../src/server_host_handle.cpp:22:25: error: ‘sendVectoroutput’ was not declared in this scope
+  sendVectoroutput(output);  // sends digged data back to client
+                         ^
+make: *** [src/server_host_handle.o] Error 1
+16:41:44 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/basic_communication.o ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+16:45:21 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/basic_communication.o ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+16:54:34 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:55:22 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+16:55:33 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+../src/client_communication_handle.cpp: In member function ‘void client_communication_handle::beginCommunication(unsigned int, std::string)’:
+../src/client_communication_handle.cpp:29:41: error: ‘gethostbyname’ was not declared in this scope
+  server = gethostbyname(hostname.c_str());
+                                         ^
+make: *** [src/client_communication_handle.o] Error 1
+16:55:41 **** Incremental Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
+ 
+Building file: ../src/client_communication_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
+Finished building: ../src/client_communication_handle.cpp
+ 
+Building target: client
+Invoking: GCC C++ Linker
+g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
+Finished building target: client
+ 
+17:00:32 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/basic_communication.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/basic_communication.d" -MT"src/basic_communication.d" -o "src/basic_communication.o" "../src/basic_communication.cpp"
+Finished building: ../src/basic_communication.cpp
+ 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+../src/server.cpp: In function ‘int main(int, char**)’:
+../src/server.cpp:15:21: error: no matching function for call to ‘server_initializer::server_initializer()’
+  server_initializer server;
+                     ^
+../src/server.cpp:15:21: note: candidates are:
+In file included from ../src/server.h:5:0,
+                 from ../src/server.cpp:1:
+../src/server_initializer.h:18:2: note: server_initializer::server_initializer(int)
+  server_initializer(const int);
+  ^
+../src/server_initializer.h:18:2: note:   candidate expects 1 argument, 0 provided
+../src/server_initializer.h:16:7: note: constexpr server_initializer::server_initializer(const server_initializer&)
+ class server_initializer {
+       ^
+../src/server_initializer.h:16:7: note:   candidate expects 1 argument, 0 provided
+make: *** [src/server.o] Error 1
+17:00:46 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_host_handle.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_host_handle.d" -MT"src/server_host_handle.d" -o "src/server_host_handle.o" "../src/server_host_handle.cpp"
+Finished building: ../src/server_host_handle.cpp
+ 
+Building file: ../src/server_initializer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_initializer.d" -MT"src/server_initializer.d" -o "src/server_initializer.o" "../src/server_initializer.cpp"
+Finished building: ../src/server_initializer.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/basic_communication.o ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 
+17:00:52 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+In file included from ../src/server.h:5:0,
+                 from ../src/server.cpp:1:
+../src/server_initializer.h: In member function ‘void server_initializer::closeSocket()’:
+../src/server_initializer.h:27:17: error: ‘close’ was not declared in this scope
+   close(listener);
+                 ^
+make: *** [src/server.o] Error 1
+17:01:35 **** Incremental Build of configuration Debug for project server ****
+make all 
+Building file: ../src/server.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_initializer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_initializer.d" -MT"src/server_initializer.d" -o "src/server_initializer.o" "../src/server_initializer.cpp"
+Finished building: ../src/server_initializer.cpp
+ 
+Building target: server
+Invoking: GCC C++ Linker
+g++  -o "server"  ./src/basic_communication.o ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+Finished building target: server
+ 

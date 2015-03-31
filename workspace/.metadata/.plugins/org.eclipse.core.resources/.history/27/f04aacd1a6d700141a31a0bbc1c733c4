@@ -1,0 +1,141 @@
+#include "server_host_handle.h"
+
+host_handle::host_handle() : hostSocket(0) {
+}
+
+host_handle::~host_handle() {
+
+}
+
+void host_handle::handleHost (int listener) {	// Initial host
+
+	acceptHost(listener);	// accept host and sets host socket
+
+	vector <string> inquiry (getInquiry());	// get inquiry
+
+	vector <char> filter (getFilter());		// get filter
+
+	server_users_parser parser (inquiry, filter);	// dig data
+
+	vector <string> output (parser.getOutput());	// gets digged data
+
+	sendOutput(output);		// sends digged data back to client
+
+	shutdown (hostSocket);		// close host socket
+}
+
+void host_handle::acceptHost (int listener) {
+
+	struct sockaddr_in cli_addr;
+
+	unsigned int clilen = sizeof(cli_addr);
+
+	hostSocket = accept(listener, (struct sockaddr *) (&cli_addr), &clilen);
+
+	nCheck (hostSocket, ACCEPT_ERROR);
+};
+
+vector <string> host_handle::getInquiry () {			// gets arguments
+
+	unsigned int argc (getArgc());	// handshake - receiving argc
+
+	vector <string> inquiry;
+
+	for (; argc > 0; --argc) {				// iterate until all arguments are loaded
+
+		unsigned int bufferSize (getArgc());	// handshake - receiving bufferSize
+
+		string message (getArgument(bufferSize));		// actual message receiver
+
+		inquiry.push_back(message);
+	};
+	return inquiry;
+}
+
+string host_handle::getArgument (unsigned int bufferSize) {				// actual message receiver
+
+	vector <char> buffer (bufferSize);
+
+	int n = read(hostSocket, &buffer[0], buffer.size());
+
+	nCheck (n, READING_ERROR);
+
+	string str (buffer.begin(), buffer.end());
+
+	return str;
+};
+
+vector <char> host_handle::getFilter () {
+
+	unsigned int bufferSize (getArgc());
+
+	vector <char> buffer;
+
+	if (bufferSize)
+		buffer.resize(bufferSize);
+	else
+		return buffer;
+
+	int n = read (hostSocket, &buffer[0], bufferSize);
+
+	nCheck(n, READING_ERROR);
+
+	return buffer;
+};
+
+unsigned int host_handle::getArgc () {			// handshake - receiving argc
+	unsigned int argc(0);
+
+	int n = read(hostSocket, &argc, sizeof(argc));
+
+	nCheck(n, READING_ERROR);
+
+	return argc;
+};
+
+void host_handle::sendOutput (vector <string> output) {
+	sendArgc(output.size());
+
+	for (auto it(output.begin()); it < output.end(); ++it)
+		sendString(*it);
+};
+
+void host_handle::sendArgc (unsigned int argc) {
+
+	int n(0);
+
+	n = write(hostSocket, &argc, sizeof(argc));
+
+	nCheck (n, WRITE_ERROR);
+};
+
+void host_handle::sendString (string str) {
+	vector <char> data (str.begin(), str.end());
+
+	string output(data.begin(), data.end());
+
+	int n(0);
+
+	// hand shake - send bufferSize
+
+	unsigned int bufferSize = data.size();
+
+	n = write(hostSocket, &bufferSize , sizeof(bufferSize));
+
+	nCheck (n, WRITE_ERROR);
+
+	// sending of actual parameters
+
+	n = write(hostSocket, &data[0], bufferSize);
+
+	nCheck (n, WRITE_ERROR);
+};
+
+const char* host_handle::listener_errors[] {
+	"ERROR on accept",
+	"ERROR reading from socket",
+	"ERROR writing to socket",
+	"Unknown transmit error",
+};
+
+

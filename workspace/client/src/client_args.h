@@ -53,7 +53,11 @@ private :	// methods | constants | enumerations
 		*val = *arg + NEXT_ARG_VAL;	// argument value is based on actual argument
 	};
 
+	/* constants */
+
 	static const char* client_errors[];	// list of client errors
+
+	/* enumerations */
 
 	enum client_errors {	// enumerations of client errors
 		INVALID_PORT_NUMBERS = 0,
@@ -98,7 +102,7 @@ private :	// methods | constants | enumerations
 
 public : // getters methods
 
-	inline string getHostname() const {			// returns hostname
+	inline string getHostname() const {			// returns host name
 		return hostname;
 	}
 
@@ -106,7 +110,7 @@ public : // getters methods
 		return port;
 	}
 
-	inline vector <string> getInquiry () const {	// returns quiry
+	inline vector <string> getInquiry () const {	// returns inquiry
 		return inquiry;
 	}
 

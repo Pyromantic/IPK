@@ -1,18 +1,14 @@
 #include "server_args.h"
 
-server_args::server_args() : port(0) {
-
-};
-
-server_args::~server_args() {
-};
-
-void server_args::argumentsParsing(const int argc, char **arguments) {	// parsing argument
+server_args::server_args (const int argc, char **arguments) : port(0) {
 
 	argcCheck(argc);
 
 	setPort(arguments);
-}
+};
+
+server_args::~server_args() {
+};
 
 void server_args::argcCheck(const int argc) {	// method of arguments numeric check
 	if (argc < MIN_SERVER_ARGC)

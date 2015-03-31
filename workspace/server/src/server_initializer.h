@@ -7,23 +7,18 @@
 
 #pragma once
 
-
-#include <string>
-
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <unistd.h>
-#include <string.h>
-
-
 
 class server_initializer {
 public:
 	server_initializer();
+
 	virtual ~server_initializer();
 
-	void inicializeServer(const unsigned int);
+	void inicializeServer(const int);
 
 	void startsListening();
 
@@ -31,20 +26,20 @@ public:
 		close(listener);
 	};
 
-	inline int getSocket () const {
-		return listener;
-	}
-
 private :
 
 	int listener;
 
 	static const char* socket_errors[];
 
-	enum socket_errors {	// enums of socket errors
+	enum socket_errors {	// enumerations of socket errors
 			ERROR_OPENING = 0,
 			ERROR_BINDING = 1,
 		};
+public :
+	/* getters method */
 
-
+	inline int getSocket () const {
+		return listener;
+	}
 };

@@ -1,0 +1,33 @@
+#include "basic_communication.h"
+
+string client_communication_handle::getString (unsigned int bufferSize) {
+
+	vector <char> buffer (bufferSize);
+
+	int n = read(communicati, &buffer[0], buffer.size());
+
+	nCheck (n, READ_ERROR);
+
+	string str (buffer.begin(), buffer.end());
+
+	return str;
+};
+
+unsigned int client_communication_handle::getArgc () {
+	unsigned int argc(0);
+
+	int n = read(communicati, &argc, sizeof(argc));
+
+	nCheck(n, READ_ERROR);
+
+	return argc;
+};
+
+const char* client_communication_handle::sender_errors[] {	// list of client errors
+		"ERROR opening socket",
+		"ERROR, no such host",
+		"ERROR connecting",
+		"ERROR writing to socket",
+		"ERROR reading from socket",
+		"ERROR transmitting stuff"
+};

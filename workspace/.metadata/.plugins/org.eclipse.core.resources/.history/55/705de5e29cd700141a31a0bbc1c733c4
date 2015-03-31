@@ -1,0 +1,73 @@
+#pragma once
+
+#include <string>
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
+
+#include <iostream>
+#include <vector>
+
+#include "server_users_parser.h"
+
+using namespace std;
+
+class host_handle {
+public :
+	host_handle();
+
+	virtual ~host_handle();
+
+	void handleHost(int);	// starts whole process
+
+private :
+
+	/* variables */
+
+	int hostSocket;		// host socket
+
+	/*  methods | constants | enumerations */
+
+	/* receiving methods */
+
+	void acceptHost(int);	// accepts host communication request
+
+	vector <string> getInquiry();		// assemble inquiry from received arguments
+
+	unsigned int getArgc();				// receive buffer size for argument from client
+
+	string getArgument (unsigned int);	// receive single argument
+
+	vector <char> getFilter();			// receive filter
+
+	/* sender methods */
+
+	void sendOutput (vector<string>);
+
+	void sendArgument (string);
+
+	/* check method */
+
+	inline void nCheck (int n, int ERROR_TYPE) {
+		if (n < 0) {
+			close(hostSocket);
+			throw listener_errors[ERROR_TYPE];
+		}
+	};
+
+	/* constants */
+
+	static const char* listener_errors[];
+
+	/* enumerations */
+
+	enum listener_errors {	// enumerations of listener errors
+		ACCEPT_ERROR = 0,
+		READING_ERROR = 1,
+		WRITING_ERROR = 2,
+		TRANSMIT_ERROR = 3,
+	};
+
+};

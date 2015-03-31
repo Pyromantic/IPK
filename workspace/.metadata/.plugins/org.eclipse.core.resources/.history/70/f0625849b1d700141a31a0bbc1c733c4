@@ -1,0 +1,65 @@
+/*
+ * client_sender.cpp
+ *
+ *  Created on: Mar 21, 2015
+ *      Author: majk
+ */
+
+#include "client_communication_handle.h"
+
+using namespace std;
+
+client_communication_handle::client_communication_handle(unsigned int port, string hostname) {
+
+	beginCommunication(port, hostname);
+}
+
+client_communication_handle::~client_communication_handle() {
+
+}
+
+void client_communication_handle::beginCommunication (unsigned int port, string hostname) {
+
+	struct sockaddr_in serv_addr{};
+
+	struct hostent *server{};
+
+	communicati = socket(AF_INET, SOCK_STREAM, 0);
+
+	if (communicati < 0)
+		throw sender_errors[OPENING_ERROR];
+
+	server = gethostbyname(hostname.c_str());
+
+	if (server == NULL)
+		throw sender_errors[NOHOST_ERROR];
+
+	serv_addr.sin_family = AF_INET;
+
+    serv_addr.sin_port = htons(port);
+
+    if (connect(hostSocket, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
+        throw sender_errors[CONNECT_ERROR];
+}
+
+void client_communication_handle::sendArguments (vector <string> inquiry, vector <char> filter) {	// sends server arguments
+
+	sendArgc (inquiry.size());	// sends number of inquiry arguments to server
+
+	for (auto it (inquiry.begin()); it < inquiry.end(); ++it) 	// iterates over arguments
+		sendArgument (*it);		// sends single argument to server
+
+
+	unsigned int argc = filter.size();
+
+	sendArgc (argc);			// sends number of filter arguments to server
+
+	if (argc)
+		sendFilter (filter);	// send whole filter vector
+};
+
+const char* client_communication_handle::sender_errors[] {	// list of client errors
+		"ERROR opening socket",
+		"ERROR, no such host",
+		"ERROR connecting",
+};

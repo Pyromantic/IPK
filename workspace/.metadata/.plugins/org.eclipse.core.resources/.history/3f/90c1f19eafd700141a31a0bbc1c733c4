@@ -1,0 +1,82 @@
+#include "basic_communication.h"
+
+basic_communication::basic_communication () : hostSocket(0) {
+
+};
+
+basic_communication::~basic_communication () {
+
+};
+
+void basic_communication::sendVector (vector <string> strings) {
+	sendArgc (strings.size());	// sends count of strings
+
+	for (auto it (strings.begin()); it < strings.end(); ++it) 	// iterates over strings
+		sendString (*it);		// sends single strings
+};
+
+void basic_communication::sendString (string argument) {
+
+	vector <char> data (argument.begin(), argument.end());
+
+	string output(data.begin(), data.end());
+
+	sendArgc (data.size());		// sends buffer size
+
+	int n = write(hostSocket, &data[0], data.size());	// sending of actual string
+
+	nCheck (n, WRITE_ERROR);
+};
+
+void basic_communication::sendArgc (const unsigned int argc) { // number of arguments
+
+	int n = write(hostSocket, &argc, sizeof(argc));
+
+	nCheck (n, WRITE_ERROR);
+};
+
+vector <string> basic_communication::getVector () {
+
+	unsigned int argc (getArgc());
+
+	vector <string> output;
+
+	for (; argc > 0; --argc) {				// iterate until all arguments are loaded
+
+			unsigned int bufferSize (getArgc());	// handshake - receiving bufferSize
+
+			string message (getString(bufferSize));	// actual message receiver
+
+			output.push_back(message);
+	};
+
+	return output;
+};
+
+string basic_communication::getString (unsigned int bufferSize) {
+
+	vector <char> buffer (bufferSize);
+
+	int n = read(hostSocket, &buffer[0], buffer.size());
+
+	nCheck (n, READ_ERROR);
+
+	string str (buffer.begin(), buffer.end());
+
+	return str;
+};
+
+unsigned int basic_communication::getArgc () {
+	unsigned int argc(0);
+
+	int n = read(hostSocket, &argc, sizeof(argc));
+
+	nCheck(n, READ_ERROR);
+
+	return argc;
+};
+
+const char* basic_communication ::communication_errors[] {	// list of client errors
+		"ERROR reading from socket",
+		"ERROR writing to socket",
+};

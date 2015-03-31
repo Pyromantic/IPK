@@ -1,15 +1,20 @@
-19:04:11 **** Incremental Build of configuration Debug for project server ****
+17:01:35 **** Incremental Build of configuration Debug for project server ****
 make all 
-Building file: ../src/server_users_parser.cpp
+Building file: ../src/server.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_users_parser.d" -MT"src/server_users_parser.d" -o "src/server_users_parser.o" "../src/server_users_parser.cpp"
-Finished building: ../src/server_users_parser.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server.d" -MT"src/server.d" -o "src/server.o" "../src/server.cpp"
+Finished building: ../src/server.cpp
+ 
+Building file: ../src/server_initializer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/server_initializer.d" -MT"src/server_initializer.d" -o "src/server_initializer.o" "../src/server_initializer.cpp"
+Finished building: ../src/server_initializer.cpp
  
 Building target: server
 Invoking: GCC C++ Linker
-g++  -o "server"  ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
+g++  -o "server"  ./src/basic_communication.o ./src/server.o ./src/server_args.o ./src/server_host_handle.o ./src/server_initializer.o ./src/server_users_parser.o   
 Finished building target: server
  
 
-19:04:12 Build Finished (took 730ms)
+17:01:35 Build Finished (took 566ms)
 
