@@ -1,38 +1,36 @@
 #include "server_host_handle.h"
 
 host_handle::host_handle(int listener) {
-	handleHost(listener);
+	hostSocket = listener;
+	handleHost();
 };
 
 host_handle::~host_handle() {
 
 }
 
-void host_handle::handleHost (int listener) {	// Initial host
+void host_handle::handleHost () {	// Initial host
 
-	acceptHost(listener);	// accept host and sets host socket
+	vector <string> inquiry (receiveStringVector());	// get inquiry
 
-	vector <string> inquiry (receiveVector());	// get inquiry
-
-	vector <char> filter (getFilter());		// get filter
+	vector <char> filter (getFilter());			// get filter
 
 	server_users_parser parser (inquiry, filter);	// dig data
 
-	sendVector(parser.getOutput());		// sends digged data back to client
+	sendStringVector(parser.getOutput());		// sends digged data back to client
+
+	sendIntVector(parser.getOffsets());
 
 	close (hostSocket);		// close host socket
-}
-
-void host_handle::acceptHost (int listener) {
-
-	struct sockaddr_in cli_addr;
-
-	unsigned int clilen = sizeof(cli_addr);
-
-	hostSocket = accept(listener, (struct sockaddr *) (&cli_addr), &clilen);
-
-	nCheck (hostSocket, ACCEPT_ERROR);
 };
+
+void host_handle::sendIntVector (vector <unsigned int> offsets) {
+	sendArgc (offsets.size());
+
+	int n = write(hostSocket, &offsets[0], offsets.size());
+
+	nCheck(n, WRITE_ERROR);
+}
 
 vector <char> host_handle::getFilter () {
 
@@ -50,10 +48,6 @@ vector <char> host_handle::getFilter () {
 	nCheck(n, READ_ERROR);
 
 	return buffer;
-};
-
-const char* host_handle::receiver_errors[] {
-	"ERROR on accept",
 };
 
 

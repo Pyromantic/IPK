@@ -1,0 +1,29 @@
+#include "server.h"
+
+int main (int argc, char *argv[]) {
+
+	int port(0);
+
+	try {
+		server_args args (argc, argv);
+		port = args.getPortNumber();
+	} catch (const char* e) {
+		std::cout << "el problema: " << e << std::endl;
+		return 1;
+	}
+
+	server_initializer server;
+
+	try {
+		server.inicializeServer(port);
+
+		server.startsListening();	// starts server
+	} catch (const char * e) {
+		std::cout << "el problema socketa: " << e << std::endl;
+		return 1;
+	}
+
+	//server.closeSocket();		// stops server
+
+	return 0;
+}

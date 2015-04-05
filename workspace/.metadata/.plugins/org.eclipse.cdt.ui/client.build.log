@@ -1,20 +1,6 @@
-16:55:41 **** Incremental Build of configuration Debug for project client ****
+14:28:22 **** Incremental Build of configuration Debug for project client ****
 make all 
-Building file: ../src/client.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client.d" -MT"src/client.d" -o "src/client.o" "../src/client.cpp"
-Finished building: ../src/client.cpp
- 
-Building file: ../src/client_communication_handle.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/client_communication_handle.d" -MT"src/client_communication_handle.d" -o "src/client_communication_handle.o" "../src/client_communication_handle.cpp"
-Finished building: ../src/client_communication_handle.cpp
- 
-Building target: client
-Invoking: GCC C++ Linker
-g++  -o "client"  ./src/basic_communication.o ./src/client.o ./src/client_args.o ./src/client_communication_handle.o   
-Finished building target: client
- 
+make: Nothing to be done for `all'.
 
-16:55:41 Build Finished (took 916ms)
+14:28:22 Build Finished (took 73ms)
 

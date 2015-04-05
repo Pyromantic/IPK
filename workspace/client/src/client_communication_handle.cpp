@@ -41,14 +41,16 @@ void client_communication_handle::beginCommunication (unsigned int port, string 
 
 void client_communication_handle::sendArguments (vector <string> inquiry, vector <char> filter) {	// sends server arguments
 
-	sendVector (inquiry);
+	sendStringVector (inquiry);
 
 	sendArgc (filter.size());	// sends number of filter arguments to server
 
 	if (filter.size())
 		sendFilter (filter);	// send whole filter vector
 
-	output = receiveVector();
+	output = receiveStringVector();
+
+	offsets = receiveIntVector();
 };
 
 void client_communication_handle::sendFilter (vector <char> filter) {
@@ -56,6 +58,24 @@ void client_communication_handle::sendFilter (vector <char> filter) {
 	int n = write(hostSocket, &filter[0], filter.size());
 
 	nCheck (n, WRITE_ERROR);
+};
+
+vector <unsigned int> client_communication_handle::receiveIntVector() {
+
+	unsigned int bufferSize = receiveArgc();
+
+	vector <unsigned int> offsets;
+
+	if (!bufferSize)
+		return offsets;
+	else
+		offsets.resize(bufferSize);
+
+	int n = read(hostSocket, &offsets[0], bufferSize);
+
+	nCheck(n, READ_ERROR);
+
+	return offsets;
 };
 
 const char* client_communication_handle::sender_errors[] {	// list of client errors

@@ -29,6 +29,8 @@ private :
 
 	vector <string> output;
 
+	vector <unsigned int> offsets;
+
 	/*  methods | constants | enumerations */
 
 	void beginCommunication (unsigned int, string);	// establish communicating socket
@@ -36,6 +38,10 @@ private :
 	/* sending methods */
 
 	void sendFilter (vector <char>);
+
+	/* receiving methods */
+
+	vector <unsigned int> receiveIntVector();
 
 	/* constants */
 
@@ -54,4 +60,9 @@ public :
 	inline vector <string> getOutput () const {
 		return output;
 	};
+
+	inline vector <unsigned int> getOffsets () const {
+		return offsets;
+	};
+
 };

@@ -8,7 +8,7 @@ basic_communication::~basic_communication () {
 
 };
 
-void basic_communication::sendVector (vector <string> strings) {
+void basic_communication::sendStringVector (vector <string> strings) {
 	sendArgc (strings.size());	// sends count of strings
 
 	for (auto it (strings.begin()); it < strings.end(); ++it) 	// iterates over strings
@@ -35,7 +35,7 @@ void basic_communication::sendArgc (const unsigned int argc) { // number of argu
 	nCheck (n, WRITE_ERROR);
 };
 
-vector <string> basic_communication::receiveVector () {
+vector <string> basic_communication::receiveStringVector () {
 
 	unsigned int argc (receiveArgc());
 

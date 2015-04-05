@@ -1,0 +1,103 @@
+/*
+ * server_users_parser.h
+ *
+ *  Created on: Mar 27, 2015
+ *      Author: majk
+ */
+
+#pragma once
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <string.h>
+
+using namespace std;
+
+class server_users_parser {
+public:
+	/* constructor | destructor */
+	server_users_parser(vector <string>, vector <char>);
+
+	virtual ~server_users_parser();
+
+private :
+	/* variables */
+
+	ifstream file;				// passwd file
+
+	vector <char> filter;		// output filter
+
+	vector <string> inquiry;	// client's inquiry
+
+	vector <unsigned int> offsets;	// offsets of not found records
+
+	vector <string> output;		// output
+
+	/*  methods | constants | enumerations */
+
+	string getSwitcher();	// switch between seeking arguments
+
+	void applyInquiry();	// applies inquiry
+
+	void applyFilter();		// applies filter
+
+	string filterData(string);	// filters given string
+
+	vector <string> explodeString(string);	// explodes given string
+
+	/* file operations methods */
+
+	void parseFileByLogin();	// parse through lines of file, looking for Login
+
+	void parseFileByID();		// parse through lines of file, looking for UID
+
+	void openPasswd();			// opens passwd file
+
+	inline void closePasswd() { // closes passwd file
+		file.close();
+	};
+
+	/* initialization method */
+
+	void initialize (vector <string>, vector <char>);	// initialization
+
+	/* enumerations */
+
+	enum string_consts {
+		FIRST_CHAR = 0,
+		SWITCHER = 1,
+		ID_POSITION = 2,
+		COLON_POSITION = 1,
+	};
+
+	enum filter_types {		// enumerations of valid filter types for client
+		USER_NAME = 0,
+		UID = 1,
+		GID = 2,
+		WHOLE_NAME = 3,
+		HOME_DIR = 4,
+		LOG_SHELL = 5,
+
+		FILER_COUNT = 6,
+		PASSWD = 1,
+	};
+
+	/* constants */
+
+	static const char* defaultLoginOutput;	// default output value
+
+	static const char* path2passwd;			// path to passwd file
+
+public :
+	/* getters functions */
+
+	inline vector <string> getOutput () const {		// returns output
+		return output;
+	};
+
+	inline vector <unsigned int> getOffsets () const {	// returns offsets
+		return offsets;
+	};
+};

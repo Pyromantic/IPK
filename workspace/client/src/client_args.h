@@ -63,16 +63,14 @@ private :	// methods | constants | enumerations
 		INVALID_PORT_NUMBERS = 0,
 
 		FEW_ARGS = 0,
-		MANY_ARGS = 1,
-		ERROR_PORT_NUMBER = 2,
-		ERROR_LOGIN = 3,
-		ERROR_ARG_TYPE = 4,
-		ERROR_ARG_VALUE = 5,
+		ERROR_PORT_NUMBER = 1,
+		ERROR_LOGIN = 2,
+		ERROR_ARG_TYPE = 3,
+		ERROR_ARG_VALUE = 4,
 	};
 
 	enum client_argc {		// enumerations of client arguments
 		MIN_CLIENT_ARGC = 4,
-		MAX_CLIENT_ARGC = 15,
 
 		FIRST_ARG = 1,
 		FIRST_ARG_VALUE = 2,

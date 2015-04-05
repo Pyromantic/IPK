@@ -18,22 +18,13 @@ public :
 private :
 	/*  methods | constants | enumerations */
 
-	void handleHost(int);	// starts whole process
+	void handleHost();	// starts whole process
 
-	void acceptHost(int);		// accepts host communication request
+	/* sending methods */
+
+	void sendIntVector (vector<unsigned int>);
 
 	/* receiving methods */
 
 	vector <char> getFilter();	// receive filter
-
-	/* constants */
-
-	static const char* receiver_errors[];
-
-	/* enumerations */
-
-	enum receiver_errors {	// enumerations of receiver errors
-		ACCEPT_ERROR = 0,
-	};
-
 };

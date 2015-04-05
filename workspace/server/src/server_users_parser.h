@@ -11,8 +11,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-
-#include <iostream>
+#include <string.h>
 
 using namespace std;
 
@@ -32,7 +31,7 @@ private :
 
 	vector <string> inquiry;	// client's inquiry
 
-	vector <int> offsets;		// vector of valid offsets
+	vector <unsigned int> offsets;	// offsets of not found records
 
 	vector <string> output;		// output
 
@@ -44,17 +43,19 @@ private :
 
 	void applyFilter();		// applies filter
 
-	string filterData(string);		// filters given string
+	string filterData(string);	// filters given string
 
 	vector <string> explodeString(string);	// explodes given string
 
 	/* file operations methods */
 
-	void parseFile();			// parse through lines of file
+	void parseFile (bool);  	// parse through lines of file
 
 	void openPasswd();			// opens passwd file
 
-	inline void closePasswd();	// closes passwd file
+	inline void closePasswd() { // closes passwd file
+		file.close();
+	};
 
 	/* initialization method */
 
@@ -65,6 +66,8 @@ private :
 	enum string_consts {
 		FIRST_CHAR = 0,
 		SWITCHER = 1,
+		ID_POSITION = 2,
+		COLON_POSITION = 1,
 	};
 
 	enum filter_types {		// enumerations of valid filter types for client
@@ -88,7 +91,11 @@ private :
 public :
 	/* getters functions */
 
-	vector <string> getOutput () const {	// returns output
+	inline vector <string> getOutput () const {		// returns output
 		return output;
+	};
+
+	inline vector <unsigned int> getOffsets () const {	// returns offsets
+		return offsets;
 	};
 };

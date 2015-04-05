@@ -1,0 +1,53 @@
+#include "server_host_handle.h"
+
+host_handle::host_handle(int listener) {
+	hostSocket = listener;
+	handleHost();
+};
+
+host_handle::~host_handle() {
+
+}
+
+void host_handle::handleHost () {	// Initial host
+
+	vector <string> inquiry (receiveVector());	// get inquiry
+
+	vector <char> filter (getFilter());			// get filter
+
+	server_users_parser parser (inquiry, filter);	// dig data
+
+	sendStringVector(parser.getOutput());		// sends digged data back to client
+
+	sendIntVector(parser.getOffsets());
+
+	close (hostSocket);		// close host socket
+};
+
+void host_handle::sendIntVector (vector <unsigned int> offsets) {
+	sendArgc (offsets.size());
+
+	int n = write(hostSocket, &offsets[0], offsets.size());
+
+	nCheck(n, WRITE_ERROR);
+}
+
+vector <char> host_handle::getFilter () {
+
+	unsigned int bufferSize (receiveArgc());
+
+	vector <char> buffer;
+
+	if (bufferSize)
+		buffer.resize(bufferSize);
+	else
+		return buffer;
+
+	int n = read (hostSocket, &buffer[0], bufferSize);
+
+	nCheck(n, READ_ERROR);
+
+	return buffer;
+};
+
+

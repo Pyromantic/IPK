@@ -114,8 +114,6 @@ void client_args::argcCheck(const unsigned int argc) {		// method of arguments n
 	if (argc < MIN_CLIENT_ARGC)
 		throw client_errors[FEW_ARGS];
 
-	if (argc > MAX_CLIENT_ARGC)
-		throw client_errors[MANY_ARGS];
 };
 
 void client_args::setHostname(char *argument) {	// sets host name
@@ -138,7 +136,6 @@ void client_args::setInquiry (char *argument) {		// sets inquiry
 
 const char* client_args::client_errors[] {	// list of client errors
 	"too few arguments to a successful client call",
-	"too many arguments to a successful client call",
 	"invalid port number",
 	"third argument must be login",
 	"argument must be an valid identifiers type",

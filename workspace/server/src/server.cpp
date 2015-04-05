@@ -1,5 +1,7 @@
 #include "server.h"
 
+using namespace std;
+
 int main (int argc, char *argv[]) {
 
 	int port(0);
@@ -8,7 +10,7 @@ int main (int argc, char *argv[]) {
 		server_args args (argc, argv);
 		port = args.getPortNumber();
 	} catch (const char* e) {
-		std::cout << "el problema: " << e << std::endl;
+		cerr << e << endl;
 		return 1;
 	}
 
@@ -16,22 +18,13 @@ int main (int argc, char *argv[]) {
 
 	try {
 		server.inicializeServer(port);
+
+		server.startsListening();	// starts server
+
 	} catch (const char * e) {
-		std::cout << "el problema socketa: " << e << std::endl;
-		return 1;
+		cerr << e << endl;
+		return 2;
 	}
-
-	server.startsListening();	// starts server
-
-	try {
-		host_handle host(server.getSocket());
-	} catch (const char * e) {
-		server.closeSocket();
-		std::cout << "el problema listenera: " << e << std::endl;
-		return 1;
-	}
-
-	server.closeSocket();		// stops server
 
 	return 0;
 }

@@ -22,7 +22,7 @@ protected :
 
 	/* receiving methods */
 
-	vector <string> receiveVector ();
+	vector <string> receiveStringVector();
 
 	string receiveString (unsigned int);	// receive single argument
 
@@ -30,7 +30,7 @@ protected :
 
 	/* sender methods */
 
-	void sendVector (vector<string>);
+	void sendStringVector (vector<string>);
 
 	void sendString (string);
 

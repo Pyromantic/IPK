@@ -26,8 +26,16 @@ void server_users_parser::applyFilter() {
 	if (!filter.size())
 		return;
 
-	for (auto it(offsets.begin()); it < offsets.end(); ++it)
-		output.at(*it) = filterData(output.at(*it));
+	unsigned int position(0);
+
+	for (unsigned int i(0); i < output.size(); ++i) {
+		if (position < offsets.size() &&
+			i == offsets.at(position))
+			++position;
+		else
+			output.at(i) = filterData(output.at(i));
+	}
+
 };
 
 string server_users_parser::filterData (string data) {
@@ -39,31 +47,31 @@ string server_users_parser::filterData (string data) {
 	for (auto it(filter.begin()); it < filter.end(); ++it)
 		switch (*it) {
 		case USER_NAME :
-			final.append("," + exploded.at(*it));
+			final.append(exploded.at(*it) + " ");
 			break;
 
 		case UID :
-			final.append("," + exploded.at(*it));
+			final.append(exploded.at(*it) + " ");
 			break;
 
 		case GID :
-			final.append("," + exploded.at(*it));
+			final.append(exploded.at(*it) + " ");
 			break;
 
 		case WHOLE_NAME :
-			final.append("," + exploded.at(*it));
+			final.append(exploded.at(*it) + " ");
 			break;
 
 		case HOME_DIR :
-			final.append("," + exploded.at(*it));
+			final.append(exploded.at(*it) + " ");
 			break;
 
 		case LOG_SHELL :
-			final.append("," + exploded.at(*it));
+			final.append(exploded.at(*it) + " ");
 			break;
 		}
 
-	final.erase(final.begin());	// erase initiate char ','
+	final.erase(final.end() - 1);	// erase final space
 
 	return final;
 };
@@ -86,55 +94,61 @@ void server_users_parser::applyInquiry () {
 
 	string switcher (getSwitcher());
 
-	parseFile();
+	parseFile (!switcher.compare("u") ? true : false);
 };
 
 string server_users_parser::getSwitcher () {
 	string switcher (*inquiry.begin());
+
+	switcher = switcher.at(SWITCHER);
 
 	inquiry.erase(inquiry.begin());
 
 	return switcher;
 };
 
-void server_users_parser::parseFile () {
+void server_users_parser::parseFile (bool switcher) {
 
 	string line;
 
-	vector <string> tmp (inquiry);
+	vector <vector<string>> master(inquiry.size());
 
 	int position(0);
-	int offset(0);
 
 	openPasswd();	// opens file
 
 	while (!getline(file, line).eof()) {	// reads file line by line
 
-		auto nameEnd (line.find(":"));		// finds firsts ':'
+		string seeker(line);
 
-		string name(line.substr(FIRST_CHAR, nameEnd));	// substrings name
+		if (switcher)
+			for (int i(0); i < ID_POSITION; ++i)
+				seeker = seeker.substr(seeker.find(":") + COLON_POSITION);	// substring
+
+		seeker = seeker.substr(FIRST_CHAR, seeker.find(":"));	// substring
 
 		position = 0;
 
-		for (auto it (tmp.begin()); it < tmp.end(); ++it) {	// compares names to inquiry values
-			if (!name.compare(*it)) {
-
-				offset = (inquiry.size() - tmp.size()) + position;	// calculates offset
-
-				offsets.push_back(offset);	// saves offset
-
-				output.at(offset) = line;	// push to output
-
-				tmp.erase(it);				// erase it for faster parsing
-			}
-			++position;
+		for (auto it (inquiry.begin()); it < inquiry.end(); ++it) {	// compares names to inquiry values
+			if (!strcasecmp(it->c_str(), seeker.c_str()))
+				master[position].push_back(line);	// push to master branch
+		++position;
 		}
-
-		if (!tmp.size())	// if its nothing more to compare
-			break;
 	}
 
 	closePasswd();	// close file
+
+	for (vector<vector<string>>::size_type i(0); i < master.size(); ++i) {
+
+		if (master[i].size() == 0) {
+			output.push_back(defaultLoginOutput + inquiry.at(static_cast<int>(i)));
+			offsets.push_back(output.size() - 1);
+			continue;
+		}
+
+		for (vector<string>::size_type n(0); n < master[i].size(); ++n)
+			output.push_back(master[i][n]);
+	}
 };
 
 void server_users_parser::openPasswd () {
@@ -144,20 +158,13 @@ void server_users_parser::openPasswd () {
 		return;
 };
 
-void server_users_parser::closePasswd() {
-	file.close();
-};
-
 void server_users_parser::initialize
 (vector <string> inquirySetter, vector <char> argFilter) {
 
 	filter = argFilter;
 	inquiry = inquirySetter;
-
-	for (auto it (inquiry.begin() + SWITCHER); it < inquiry.end(); ++it)
-		output.push_back(defaultLoginOutput + *it);
 };
 
 const char* server_users_parser::defaultLoginOutput {"Chyba: neznamy login "};
 
-const char* server_users_parser::path2passwd {"/home/majk/secured/passwd"};
+const char* server_users_parser::path2passwd {"/home/majk/secured/try"};

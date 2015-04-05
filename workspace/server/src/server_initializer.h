@@ -7,10 +7,16 @@
 
 #pragma once
 
+#include <iostream>
+#include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+
+#include <csignal>
+
+#include "server_host_handle.h"
 
 class server_initializer {
 public:
@@ -22,19 +28,27 @@ public:
 
 	void startsListening();
 
-	inline void closeSocket() {
-		close(listener);
-	};
-
 private :
+	/* server listener socket */
 
-	int listener;
+	static int listener;
+
+	/*signal handler */
+
+	static void signalHandler(int);
+
+	/* constants */
 
 	static const char* socket_errors[];
 
+	/* enumerations */
+
 	enum socket_errors {	// enumerations of socket errors
 			ERROR_OPENING = 0,
-			ERROR_BINDING = 1,
+			ERROR_LISTEN = 1,
+			ERROR_BINDING = 2,
+			ERROR_ACCEPT = 3,
+			ERROR_FORK = 4,
 		};
 public :
 	/* getters method */

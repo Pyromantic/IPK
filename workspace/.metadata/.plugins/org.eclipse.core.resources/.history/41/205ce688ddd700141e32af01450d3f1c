@@ -1,0 +1,91 @@
+/*
+ * server_initializer.cpp
+ *
+ *  Created on: Mar 23, 2015
+ *      Author: majk
+ */
+
+#include "server_initializer.h"
+
+server_initializer::server_initializer() {
+
+};
+
+server_initializer::~server_initializer() {
+
+};
+
+int server_initializer::listener{0};
+
+void server_initializer::signalHandler (int signum) {
+	cout << endl << "Interrupt signal (" << signum << ") received." << endl;
+	close(server_initializer::listener);
+
+	server_initializer::listener = -1;
+};
+
+
+void server_initializer::inicializeServer(const int port) {
+
+	listener = socket(AF_INET, SOCK_STREAM, 0);
+
+	if (listener < 0)
+		throw socket_errors[ERROR_OPENING];
+
+	struct sockaddr_in serv_addr{};
+
+	serv_addr.sin_family = AF_INET;
+
+	serv_addr.sin_addr.s_addr = INADDR_ANY;
+
+	serv_addr.sin_port = htons(port);
+
+	if (bind(::listener, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
+		throw socket_errors[ERROR_BINDING];
+};
+
+void server_initializer::startsListening() {
+
+	if (listen(server_initializer::listener, 128) < 0) 		// starts listening
+		throw socket_errors[ERROR_LISTEN];
+
+	signal(SIGINT, server_initializer::signalHandler);
+
+	while (1) {
+		struct sockaddr_in cli_addr;
+
+		unsigned int clilen = sizeof(cli_addr);
+
+		if (::sig_caught) {
+			cout << "O KURWA" << endl;
+			exit (::sig_caught);
+		}
+
+		int hostSocket = accept(::listener, (struct sockaddr *) (&cli_addr), &clilen);
+
+		if (hostSocket < 0)
+			throw socket_errors[ERROR_ACCEPT];
+
+		pid_t pid = fork();
+
+		if (pid < 0) {
+			close (server_initializer::listener);
+			close (hostSocket);
+			cout << "error creating pids" << endl;
+			exit(1);
+		}
+
+		if (pid == 0) {
+			host_handle host(hostSocket);
+			exit(0);
+		}
+
+	}
+};
+
+const char* server_initializer::socket_errors[] {
+	"ERROR opening socket",
+	"ERROR listening",
+	"ERROR on binding",
+	"ERROR on accept",
+};
